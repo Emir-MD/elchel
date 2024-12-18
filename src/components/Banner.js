@@ -1,108 +1,93 @@
-import React, { useState, useEffect } from 'react';
-import img1 from '../img/paquete.jpg';
-import img2 from '../img/miercoles.jpg';
-import img3 from '../img/paega.jpg';
-import img4 from '../img/promos.png';
+import React from 'react';
 
-const Slider = () => {
-  const images = [img1, img2, img3, img4];
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Cambia la imagen automáticamente cada segundo
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Cambia cada 1 segundo
-
-    return () => clearInterval(interval); // Limpia el intervalo al desmontar el componente
-  }, [images.length]);
-
+const BannerPromocional = () => {
   return (
-    <div style={styles.container}>
-      {/* Lado Izquierdo: Texto */}
-      <div style={styles.leftSide}>
-        <h1 style={styles.text}>EL CHEL</h1>
-        <p style={styles.subText}>EL ENCANTADOR DE ESTÓMAGOS</p>
+    <section style={styles.banner}>
+      <div style={styles.textContainer}>
+        <h2 style={styles.mainText}>¡EL CHEL MÁS CERCA DE TI!</h2>
+        <p style={styles.subText}>Escríbenos y haz tu pedido para llevar o a domicilio</p>
+        <a
+          href="https://wa.me/7771861658"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={styles.callToAction}
+        >
+          <img
+            src={`${process.env.PUBLIC_URL}/img/Whatsapp.jpg`}
+            alt="WhatsApp"
+            style={styles.icon}
+          />
+          LLÁMANOS YA
+        </a>
       </div>
-
-      {/* Lado Derecho: Slider */}
-      <div style={styles.rightSide}>
-        <div style={styles.slider}>
-          {images.map((image, index) => (
-            <div
-              key={index}
-              style={{
-                ...styles.slide,
-                transform: `translateX(${(index - currentIndex) * 100}%)`,
-                transition: 'transform 0.8s ease-in-out', // Suaviza el movimiento
-              }}
-            >
-              <img src={image} alt={`Promoción ${index + 1}`} style={styles.image} />
-            </div>
-          ))}
-        </div>
+      <div style={styles.imageContainer}>
+        <img
+          src={`${process.env.PUBLIC_URL}/img/promo.png`}
+          alt="Promoción"
+          style={styles.image}
+        />
       </div>
-    </div>
+    </section>
   );
 };
 
 const styles = {
-    container: {
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-      height: '350px', // Ocupa todo el alto de la pantalla
-      backgroundColor: '#fff3e0',
-      padding: '20px',
-    },
-    leftSide: {
-      flex: 1, // Ocupa el lado izquierdo
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      textAlign: 'center',
-    },
-    text: {
-      fontSize: '3rem',
-      fontWeight: 'bold',
-      color: '#ff5722',
-      margin: 0,
-    },
-    subText: {
-      fontSize: '1.5rem',
-      color: '#333',
-      margin: 0,
-    },
-    rightSide: {
-      flex: 1, // Ocupa el lado derecho
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    slider: {
-      position: 'relative',
-      width: '500px', // Ajusta el ancho del slider
-      height: '4000px', // Ajusta el alto del slider
-      overflow: 'hidden',
-      borderRadius: '10px',
-    },
-    slide: {
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    image: {
-      width: '100%',
-      height: '100%',
-      objectFit: 'contain', // Muestra la imagen completa sin recortar
-    },
-  };
-  
+  banner: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '30px',
+    background: 'linear-gradient(to bottom, #ff9800, #ff6f00)', // Fondo degradado naranja
+    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.3)', // Sombra
+    fontFamily: '"Arial", sans-serif',
+    borderRadius: '10px',
+  },
+  textContainer: {
+    textAlign: 'center',
+    flex: 1,
+    color: '#fff',
+  },
+  mainText: {
+    fontSize: '3rem',
+    fontWeight: 'bold',
+    marginBottom: '10px',
+    textShadow: '2px 2px 5px rgba(0, 0, 0, 0.5)',
+  },
+  subText: {
+    fontSize: '1.8rem',
+    marginBottom: '20px',
+  },
+  callToAction: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '10px',
+    backgroundColor: '#25d366',
+    color: '#fff',
+    textDecoration: 'none',
+    padding: '10px 20px',
+    borderRadius: '5px',
+    fontWeight: 'bold',
+    fontSize: '1.2rem',
+    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)',
+  },
+  icon: {
+    width: '30px',
+    height: '30px',
+  },
+  imageContainer: {
+    flex: 1,
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    height: '100%',
+  },
+  image: {
+    width: '50%',
+    height: '50%',
+    objectFit: 'cover',
+    borderRadius: '10px',
+  },
+};
 
-export default Slider;
+export default BannerPromocional;

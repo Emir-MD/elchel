@@ -5,63 +5,20 @@ import { Link, useLocation } from 'react-router-dom';
 import logo from '../img/logos.png'; // Ruta correcta al logo
 
 const Navbar = () => {
-  const location = useLocation(); // Obtiene la ruta actual
+  const location = useLocation();
 
   return (
     <nav style={styles.navbar}>
-      {/* Contenedor del logo */}
       <div style={styles.logoContainer}>
         <Link to="/">
           <img src={logo} alt="El Chel Logo" style={styles.logoImage} />
         </Link>
       </div>
-
-      {/* Contenedor de enlaces */}
       <ul style={styles.navLinks}>
-        <li>
-          <Link
-            to="/sucursales"
-            style={{
-              ...styles.link,
-              ...(location.pathname === '/sucursales' && styles.activeLink),
-            }}
-          >
-            Sucursales
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/menu"
-            style={{
-              ...styles.link,
-              ...(location.pathname === '/menu' && styles.activeLink),
-            }}
-          >
-            Menú
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/nosotros"
-            style={{
-              ...styles.link,
-              ...(location.pathname === '/nosotros' && styles.activeLink),
-            }}
-          >
-            Nosotros
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/contacto"
-            style={{
-              ...styles.link,
-              ...(location.pathname === '/contacto' && styles.activeLink),
-            }}
-          >
-            Facturación
-          </Link>
-        </li>
+        <li><Link to="/sucursales" style={location.pathname === '/sucursales' ? styles.activeLink : styles.link}>Sucursales</Link></li>
+        <li><Link to="/menu" style={location.pathname === '/menu' ? styles.activeLink : styles.link}>Menú</Link></li>
+        <li><Link to="/nosotros" style={location.pathname === '/nosotros' ? styles.activeLink : styles.link}>Nosotros</Link></li>
+        <li><Link to="/contacto" style={location.pathname === '/contacto' ? styles.activeLink : styles.link}>Facturación</Link></li>
       </ul>
     </nav>
   );

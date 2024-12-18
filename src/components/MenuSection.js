@@ -23,7 +23,7 @@ const MenuSection = () => {
 };
 
 const styles = {
-    borderBottom: '3px solid #f4a261', // Borde inferior naranja
+    
   menuSection: {
     padding: '20px',
     backgroundColor: 'white', // Color naranja claro
