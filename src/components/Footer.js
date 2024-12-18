@@ -11,9 +11,10 @@ const Footer = () => {
 const styles = {
   footer: {
     textAlign: 'center',
-    padding: '10px',
-    backgroundColor: '#2d6a4f',
+    padding: '15px',
+    backgroundColor: '#5d4037', // Marrón oscuro
     color: 'white',
+    fontSize: '14px',
   },
 };
 

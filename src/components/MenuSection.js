@@ -9,12 +9,12 @@ const MenuSection = () => {
 
   return (
     <section style={styles.menuSection}>
-      <h3>Platillos Destacados</h3>
+      <h3 style={styles.title}>Platillos Destacados</h3>
       <div style={styles.menuGrid}>
         {dishes.map((dish, index) => (
           <div key={index} style={styles.card}>
-            <h4>{dish.name}</h4>
-            <p>{dish.price}</p>
+            <h4 style={styles.cardTitle}>{dish.name}</h4>
+            <p style={styles.cardPrice}>{dish.price}</p>
           </div>
         ))}
       </div>
@@ -23,21 +23,38 @@ const MenuSection = () => {
 };
 
 const styles = {
+    borderBottom: '3px solid #f4a261', // Borde inferior naranja
   menuSection: {
     padding: '20px',
+    backgroundColor: 'white', // Color naranja claro
+    color: '#2d6a4f', // Texto verde oscuro
     textAlign: 'center',
+  },
+  title: {
+    fontSize: '24px',
+    marginBottom: '20px',
   },
   menuGrid: {
     display: 'flex',
     justifyContent: 'center',
     gap: '15px',
+    flexWrap: 'wrap',
   },
   card: {
-    padding: '10px',
-    border: '1px solid #ccc',
-    borderRadius: '5px',
-    width: '150px',
-    backgroundColor: '#f8f9fa',
+    padding: '15px',
+    border: '2px solid #2d6a4f', // Borde verde oscuro
+    borderRadius: '8px',
+    width: '180px',
+    backgroundColor: '#fff', // Fondo blanco
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Sombra sutil
+  },
+  cardTitle: {
+    fontSize: '18px',
+    marginBottom: '10px',
+  },
+  cardPrice: {
+    fontSize: '16px',
+    fontWeight: 'bold',
   },
 };
 
