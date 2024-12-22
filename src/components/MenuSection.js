@@ -1,10 +1,26 @@
 import React from 'react';
+// Importa las imágenes de los platillos desde src/img
+import cochinitaImage from '../img/orden.jpg';
+import paellaImage from '../img/paella.jpg';
+import rellenoNegroImage from '../img/rollonegro.jpg';
 
 const MenuSection = () => {
   const dishes = [
-    { name: 'Chilaquiles con Pollo', price: '$97.00 MXN' },
-    { name: 'Chilaquiles con Bistec', price: '$103.00 MXN' },
-    { name: 'Enchiladas Rellenas', price: '$102.00 MXN' },
+    { 
+      name: 'Orden de cochinita', 
+      price: '$97.00 MXN', 
+      image: cochinitaImage 
+    },
+    { 
+      name: 'Paella', 
+      price: '$103.00 MXN', 
+      image: paellaImage 
+    },
+    { 
+      name: 'Tacos de relleno negro',  
+      price: '$102.00 MXN', 
+      image: rellenoNegroImage 
+    },
   ];
 
   return (
@@ -13,6 +29,11 @@ const MenuSection = () => {
       <div style={styles.menuGrid}>
         {dishes.map((dish, index) => (
           <div key={index} style={styles.card}>
+            <img 
+              src={dish.image} 
+              alt={dish.name} 
+              style={styles.image} 
+            />
             <h4 style={styles.cardTitle}>{dish.name}</h4>
             <p style={styles.cardPrice}>{dish.price}</p>
           </div>
@@ -23,12 +44,13 @@ const MenuSection = () => {
 };
 
 const styles = {
-    
   menuSection: {
     padding: '20px',
-    backgroundColor: 'white', // Color naranja claro
-    color: '#2d6a4f', // Texto verde oscuro
+    backgroundColor: 'white',
+    color: '#ff6f00',
     textAlign: 'center',
+    width: '100%', // Asegura que la sección ocupe el ancho completo
+    margin: '0 auto',
   },
   title: {
     fontSize: '24px',
@@ -39,14 +61,24 @@ const styles = {
     justifyContent: 'center',
     gap: '15px',
     flexWrap: 'wrap',
+    maxWidth: '1200px', // Límite para tarjetas, opcional
+    margin: '0 auto', // Centrado del grid
   },
   card: {
     padding: '15px',
-    border: '2px solid #2d6a4f', // Borde verde oscuro
+    border: '2px solid #ff6f00',
     borderRadius: '8px',
     width: '180px',
-    backgroundColor: '#fff', // Fondo blanco
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Sombra sutil
+    backgroundColor: '#fff',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    textAlign: 'center',
+  },
+  image: {
+    width: '100%',
+    height: '120px',
+    objectFit: 'cover',
+    borderRadius: '5px',
+    marginBottom: '10px',
   },
   cardTitle: {
     fontSize: '18px',

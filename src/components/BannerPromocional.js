@@ -1,6 +1,7 @@
 import React from 'react';
-import promo from '../img/promo.png'; // Imagen de promoción
-import whatsappIcon from '../img/Whatsapp.jpg'; // Imagen JPG de WhatsApp
+// Importa las imágenes desde la carpeta src/img
+import whatsappImg from '../img/Whatsapp.jpg';
+import promoImg from '../img/promo.png';
 
 const BannerPromocional = () => {
   return (
@@ -9,18 +10,22 @@ const BannerPromocional = () => {
         <h2 style={styles.mainText}>¡EL CHEL MÁS CERCA DE TI!</h2>
         <p style={styles.subText}>Escríbenos y haz tu pedido para llevar o a domicilio</p>
         <a
-          href="https://wa.me/7771861658" // Número de WhatsApp
+          href="https://wa.me/7771861658"
           target="_blank"
           rel="noopener noreferrer"
           style={styles.callToAction}
         >
-          <img src={whatsappIcon} alt="WhatsApp" style={styles.icon} />
+          <img
+            src={whatsappImg}
+            alt="WhatsApp"
+            style={styles.icon}
+          />
           LLÁMANOS YA
         </a>
       </div>
       <div style={styles.imageContainer}>
         <img
-          src={promo} // Imagen promocional
+          src={promoImg}
           alt="Promoción"
           style={styles.image}
         />
@@ -32,59 +37,65 @@ const BannerPromocional = () => {
 const styles = {
   banner: {
     display: 'flex',
+    flexDirection: 'row', // Mantiene texto a la izquierda y la imagen a la derecha
+    justifyContent: 'space-between', // Espacio máximo entre elementos
     alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: '30px',
-    background: 'linear-gradient(to bottom, #ff9800, #ff6f00)', // Fondo degradado naranja
-    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.3)', // Sombra para profundidad
+    padding: '1rem 2rem', // Padding dinámico
+    background: 'linear-gradient(to bottom, #ff9800, #ff6f00)',
+    boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.2)',
     fontFamily: '"Arial", sans-serif',
-    borderRadius: '10px', // Bordes suaves para el banner
+    width: '100%', // Ocupa el 100% del ancho disponible
+    margin: '0 auto',
+    height: 'clamp(250px, 35vw, 350px)', // Altura adaptativa basada en el ancho de la pantalla
+    borderRadius: '10px', // Bordes redondeados
+    overflow: 'hidden', // Evita desbordamientos
   },
   textContainer: {
-    textAlign: 'center',
-    flex: 1,
+    flex: '1', // Ocupa espacio restante a la izquierda
+    textAlign: 'left', // Alineado a la izquierda
     color: '#fff',
+    padding: '0 1rem',
   },
   mainText: {
-    fontSize: '3rem', // Título más grande
+    fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', // Tamaño dinámico del texto principal
     fontWeight: 'bold',
-    marginBottom: '10px',
-    textShadow: '2px 2px 5px rgba(0, 0, 0, 0.5)', // Sombra para resaltar
+    marginBottom: '0.5rem',
   },
   subText: {
-    fontSize: '1.8rem', // Subtítulo más grande
-    marginBottom: '20px',
+    fontSize: 'clamp(1rem, 2vw, 1.5rem)', // Tamaño dinámico del subtítulo
+    marginBottom: '1rem',
   },
   callToAction: {
-    display: 'flex',
+    display: 'inline-flex',
     alignItems: 'center',
-    justifyContent: 'center',
-    gap: '10px',
-    backgroundColor: '#25d366', // Verde WhatsApp
+    backgroundColor: '#25d366',
     color: '#fff',
     textDecoration: 'none',
-    padding: '10px 20px',
+    padding: '0.6rem 1.2rem',
     borderRadius: '5px',
     fontWeight: 'bold',
-    fontSize: '1.2rem',
-    boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
+    fontSize: 'clamp(0.8rem, 1.5vw, 1rem)', // Tamaño adaptativo del texto del botón
+    boxShadow: '0 2px 3px rgba(0, 0, 0, 0.2)',
+    gap: '0.3rem',
   },
   icon: {
-    width: '30px',
-    height: '30px',
+    width: 'clamp(12px, 2vw, 16px)', // Tamaño dinámico del icono
+    height: 'clamp(12px, 2vw, 16px)',
+    marginRight: '0.5rem',
   },
   imageContainer: {
-    flex: 1,
+    flex: '0 1 50%', // Ajusta la imagen al 50% del ancho total
     display: 'flex',
     justifyContent: 'flex-end',
     alignItems: 'center',
-    height: '100%',
+    paddingRight: '2%',
   },
   image: {
-    width: '50%', // Imagen ocupa todo el ancho
-    height: '50%', // Imagen ocupa toda la altura
-    objectFit: 'cover', // Asegura que la imagen cubra todo el contenedor
-    borderRadius: '10px', // Bordes suaves para la imagen
+    width: '100%', // Imagen completamente responsiva
+    maxWidth: 'clamp(300px, 50vw, 550px)', // Límite dinámico del tamaño máximo
+    height: 'auto',
+    objectFit: 'cover',
+    borderRadius: '10px',
   },
 };
 
