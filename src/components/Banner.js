@@ -58,13 +58,13 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between', // Distribuye elementos
-    flexWrap: 'wrap', // Ajusta para pantallas pequeñas
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
     width: '100%',
     padding: '2%',
-    border: '3px solid #ff5722', // Marco naranja
+    border: '3px solid #ff5722',
     borderRadius: '10px',
-    boxSizing: 'border-box', // Asegura que padding y border no afecten el ancho
+    boxSizing: 'border-box',
   },
   leftSide: {
     flex: '1',
@@ -72,13 +72,13 @@ const styles = {
     margin: '0 auto',
   },
   text: {
-    fontSize: 'clamp(1.5rem, 4vw, 3rem)', // Ajusta tamaño según la pantalla
+    fontSize: 'clamp(1.5rem, 4vw, 3rem)',
     fontWeight: 'bold',
     color: '#ff5722',
     marginBottom: '10px',
   },
   subText: {
-    fontSize: 'clamp(1rem, 2.5vw, 1.5rem)', // Escala proporcional
+    fontSize: 'clamp(1rem, 2.5vw, 1.5rem)',
     color: '#333',
   },
   rightSide: {
@@ -86,11 +86,12 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    position: 'relative',
   },
   slider: {
     position: 'relative',
     width: '100%',
-    maxWidth: '600px', // Limita el ancho máximo del slider
+    maxWidth: '600px',
     aspectRatio: '16 / 9',
     overflow: 'hidden',
     borderRadius: '10px',
@@ -108,7 +109,7 @@ const styles = {
   image: {
     width: '100%',
     height: '100%',
-    objectFit: 'cover',
+    objectFit: 'contain',
   },
 };
 

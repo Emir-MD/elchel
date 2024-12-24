@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../components/Footer';
+import Footer from '../components/Contacto';
 import suc1 from '../img/suc1.png';
 import suc2 from '../img/suc2.png';
 
@@ -63,7 +63,7 @@ const styles = {
   },
   title: {
     fontSize: '2rem',
-    color: '#333',
+    color: '#ff6f00',
     textAlign: 'center',
     marginBottom: '1rem',
   },
@@ -74,36 +74,40 @@ const styles = {
     alignItems: 'center',
   },
   card: {
-    backgroundColor: '#fff',
     padding: '1rem',
+    background: 'linear-gradient(to bottom, #ff9800, #ff6f00)', 
     borderRadius: '8px',
-    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+    boxShadow: '0 2px 4px rgba(186, 1, 1, 0.95)',
     width: '90%',
     maxWidth: '600px',
     textAlign: 'left',
   },
   cardTitle: {
     fontSize: '1.5rem',
-    color: '#007BFF',
+    color: '#000000',
     marginBottom: '0.5rem',
   },
   cardText: {
     fontSize: '1rem',
-    color: '#555',
+    color: '#000000',
     marginBottom: '0.5rem',
   },
   mapLink: {
-    color: '#FF5722',
+    color: 'blue',
     textDecoration: 'none',
     fontWeight: 'bold',
     fontSize: '1rem',
   },
   image: {
-    width: '100%',
+    width: '80%',
     height: 'auto',
     borderRadius: '8px',
     marginTop: '0.5rem',
+    display: 'block', // Asegura que la imagen se comporte como un bloque
+    marginLeft: 'auto', // Centra horizontalmente
+    marginRight: 'auto', // Centra horizontalmente
   },
+  
 };
 
 export default Sucursales;

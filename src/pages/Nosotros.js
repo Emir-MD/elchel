@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../components/Footer'; // Asegúrate de que la ruta sea correcta
+import Footer from '../components/Contacto'; // Asegúrate de que la ruta sea correcta
 import lugar1 from '../img/ressuc1.jpg'; // Reemplaza con la imagen correcta
 import lugar2 from '../img/ressuc2.jpg'; // Reemplaza con la imagen correcta
 import lugar3 from '../img/ressuc3.png'; // Reemplaza con la imagen correcta

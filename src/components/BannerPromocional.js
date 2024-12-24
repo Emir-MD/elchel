@@ -37,62 +37,61 @@ const BannerPromocional = () => {
 const styles = {
   banner: {
     display: 'flex',
-    flexDirection: 'row', // Mantiene texto a la izquierda y la imagen a la derecha
-    justifyContent: 'space-between', // Espacio máximo entre elementos
+    flexDirection: 'column', // Alinea los elementos verticalmente en móviles
     alignItems: 'center',
-    padding: '1rem 2rem', // Padding dinámico
-    background: 'linear-gradient(to bottom, #ff9800, #ff6f00)',
+    justifyContent: 'center',
+    padding: '1rem',
+    background: 'linear-gradient(to bottom, #ff9800, #ff6f00)', // Fondo degradado
     boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.2)',
     fontFamily: '"Arial", sans-serif',
-    width: '100%', // Ocupa el 100% del ancho disponible
+    width: '100%',
     margin: '0 auto',
-    height: 'clamp(250px, 35vw, 350px)', // Altura adaptativa basada en el ancho de la pantalla
-    borderRadius: '10px', // Bordes redondeados
-    overflow: 'hidden', // Evita desbordamientos
+    height: 'auto', // Permite que la altura se ajuste al contenido
+    borderRadius: '10px',
+    overflow: 'hidden',
+    gap: '1rem', // Espaciado uniforme entre elementos
   },
   textContainer: {
-    flex: '1', // Ocupa espacio restante a la izquierda
-    textAlign: 'left', // Alineado a la izquierda
+    textAlign: 'center', // Centra el texto
     color: '#fff',
     padding: '0 1rem',
   },
   mainText: {
-    fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', // Tamaño dinámico del texto principal
+    fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', // Tamaño dinámico del título
     fontWeight: 'bold',
     marginBottom: '0.5rem',
   },
   subText: {
-    fontSize: 'clamp(1rem, 2vw, 1.5rem)', // Tamaño dinámico del subtítulo
+    fontSize: 'clamp(1rem, 3vw, 1.2rem)', // Tamaño dinámico del subtítulo
     marginBottom: '1rem',
   },
   callToAction: {
     display: 'inline-flex',
     alignItems: 'center',
+    justifyContent: 'center', // Centra el contenido del botón
     backgroundColor: '#25d366',
     color: '#fff',
     textDecoration: 'none',
-    padding: '0.6rem 1.2rem',
+    padding: '0.5rem 1rem',
     borderRadius: '5px',
     fontWeight: 'bold',
-    fontSize: 'clamp(0.8rem, 1.5vw, 1rem)', // Tamaño adaptativo del texto del botón
+    fontSize: 'clamp(0.8rem, 2vw, 1rem)', // Tamaño adaptativo
     boxShadow: '0 2px 3px rgba(0, 0, 0, 0.2)',
-    gap: '0.3rem',
+    gap: '0.5rem',
   },
   icon: {
-    width: 'clamp(12px, 2vw, 16px)', // Tamaño dinámico del icono
-    height: 'clamp(12px, 2vw, 16px)',
-    marginRight: '0.5rem',
+    width: 'clamp(16px, 4vw, 20px)', // Tamaño dinámico del ícono
+    height: 'clamp(16px, 4vw, 20px)',
   },
   imageContainer: {
-    flex: '0 1 50%', // Ajusta la imagen al 50% del ancho total
     display: 'flex',
-    justifyContent: 'flex-end',
+    justifyContent: 'center', // Centra la imagen
     alignItems: 'center',
-    paddingRight: '2%',
+    width: '100%',
+    padding: '1rem',
   },
   image: {
-    width: '100%', // Imagen completamente responsiva
-    maxWidth: 'clamp(300px, 50vw, 550px)', // Límite dinámico del tamaño máximo
+    width: 'clamp(200px, 80%, 400px)', // Tamaño dinámico de la imagen
     height: 'auto',
     objectFit: 'cover',
     borderRadius: '10px',

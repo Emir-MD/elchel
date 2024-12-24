@@ -63,7 +63,7 @@ const Navbar = () => {
               ...(location.pathname === '/contacto' && styles.activeLink),
             }}
           >
-            Facturación
+           Contacto
           </Link>
         </li>
       </ul>
@@ -74,44 +74,82 @@ const Navbar = () => {
 const styles = {
   navbar: {
     display: 'flex',
+    flexWrap: 'wrap',
     alignItems: 'center',
-    justifyContent: 'space-between', // Distribuye logo y enlaces
-    padding: '10px 30px',
-    backgroundColor: 'white', // Fondo blanco
-    borderBottom: '3px solid #e76f51', // Línea inferior naranja
-    width: '100%', // Asegura que el navbar cubra el 100% del ancho de la pantalla
+    justifyContent: 'space-between',
+    padding: '5px 1px',
+    backgroundColor: 'white',
+    borderBottom: '3px solid #e76f51',
+    width: '100%',
     top: 0,
     left: 0,
-    zIndex: 1000, // Asegura que el navbar esté sobre otros elementos
+    zIndex: 1000, // Asegura que esté sobre otros elementos
+    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)', // Sombra para mejor visibilidad
   },
   logoContainer: {
-    display: 'flex',
-    alignItems: 'center',
-  },
+  display: 'flex',
+  justifyContent: 'center', // Centra horizontalmente dentro de su espacio
+  alignItems: 'center',
+  flex: '0 0 auto', // Evita que el logo se estire
+  paddingLeft: '100px', // Ajusta el espacio hacia la derecha
+},
+
   logoImage: {
-    height: 'clamp(50px, 10vw, 100px)', // Ajusta el tamaño del logo en función de la pantalla
+    height: 'clamp(100px, 8vw, 80px)', // Tamaño dinámico del logo
     width: 'auto',
   },
   navLinks: {
     display: 'flex',
+    flexWrap: 'wrap', // Permite que los enlaces bajen a otra línea si es necesario
     listStyle: 'none',
     margin: 0,
     padding: 0,
-    gap: '20px', // Espaciado entre enlaces
-    justifyContent: 'center', // Centra los enlaces en su contenedor
+    gap: '15px', // Espaciado entre enlaces
+    justifyContent: 'center',
     flex: 1,
   },
   link: {
-    color: 'black', // Letras negras
+    color: 'black',
     textDecoration: 'none',
-    fontSize: 'clamp(14px, 1.2vw, 18px)', // Tamaño dinámico del texto
+    fontSize: 'clamp(12px, 1.5vw, 18px)', // Tamaño dinámico
     textTransform: 'uppercase',
     fontFamily: 'Poppins, sans-serif',
-    transition: 'color 0.3s, border-bottom 0.3s',
+    padding: '5px 10px', // Espaciado interno
+    borderRadius: '4px',
+    transition: 'color 0.3s, background-color 0.3s',
   },
   activeLink: {
-    color: '#e76f51', // Color naranja al seleccionarse
-    borderBottom: '3px solid #e76f51', // Subrayado naranja
+    color: '#fff', // Texto blanco para el enlace activo
+    backgroundColor: '#e76f51', // Fondo naranja para el enlace activo
+    borderBottom: 'none', // Elimina el subrayado en el enlace activo
+  },
+
+  // Media queries
+  '@media (max-width: 768px)': {
+    navbar: {
+      flexDirection: 'column', // Los elementos se apilan
+      alignItems: 'flex-start', // Alineación a la izquierda
+    },
+    navLinks: {
+      flexDirection: 'column', // Los enlaces se apilan
+      gap: '10px', // Espaciado reducido entre enlaces
+    },
+    link: {
+      fontSize: '14px', // Tamaño reducido en móviles
+    },
+  },
+
+  '@media (max-width: 480px)': {
+    navbar: {
+      padding: '10px', // Reducción de padding en pantallas más pequeñas
+    },
+    logoImage: {
+      height: '60px', // Tamaño fijo para el logo
+    },
+    link: {
+      fontSize: '60px', // Tamaño aún más pequeño para pantallas pequeñas
+      padding: '5px',
+    },
   },
 };
 

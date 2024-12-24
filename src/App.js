@@ -4,11 +4,12 @@ import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import BannerPromocional from './components/BannerPromocional';
 import MenuSection from './components/MenuSection';
-import Footer from './components/Footer';
+import Contacto from './components/Contacto';
 import Sucursales from './pages/Sucursales';
 import Menu from './pages/Menu';
 import Nosotros from './pages/Nosotros';
-import Contacto from './pages/Contacto';
+import Opiniones from './pages/Opiniones'; // Asegúrate de importar Opiniones
+import Terminos from './pages/Terminos'; // Importa Términos
 
 const App = () => {
   return (
@@ -22,13 +23,16 @@ const App = () => {
               <BannerPromocional />
               <Banner />
               <MenuSection />
-              <Footer />
+              <Opiniones /> {/* Agregado antes del footer */}
+              <Contacto />
             </>
           }
         />
         <Route path="/sucursales" element={<Sucursales />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/opiniones" element={<Opiniones />} /> {/* Ruta para Opiniones */}
+        <Route path="/terminos" element={<Terminos />} /> {/* Ruta para Términos */}
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
     </>
