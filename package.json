@@ -2,7 +2,7 @@
   "name": "restaurante",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Emir-MD.github.io/restaurante",
+  "homepage": ".",
   "dependencies": {
     "@fontsource/changa": "^5.1.0",
     "@fontsource/poppins": "^5.1.0",
@@ -44,7 +44,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "gh-pages": "^6.2.0"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
