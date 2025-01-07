@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/elchel/static/css/main.d3721035.css",
+    "main.js": "/elchel/static/js/main.9055f766.js",
+    "static/js/488.5490d9a0.chunk.js": "/elchel/static/js/488.5490d9a0.chunk.js",
+    "static/media/ressuc3.png": "/elchel/static/media/ressuc3.2b05da598bea34d85e28.png",
+    "static/media/paella.jpg": "/elchel/static/media/paella.d53677a7a38c75d59cbe.jpg",
+    "static/media/promo.png": "/elchel/static/media/promo.b5c7184aaa62a7bdbd6f.png",
+    "static/media/suc1.png": "/elchel/static/media/suc1.7be90c7b7889ce7a76ac.png",
+    "static/media/promos.png": "/elchel/static/media/promos.93b731ce0939ad469b91.png",
+    "static/media/ressuc2.jpg": "/elchel/static/media/ressuc2.e9170aff4c453deb15e1.jpg",
+    "static/media/suc2.png": "/elchel/static/media/suc2.2727b86ddb4744df43dc.png",
+    "static/media/ressuc1.jpg": "/elchel/static/media/ressuc1.9d3a014a74bbaaf7c889.jpg",
+    "static/media/instagram.png": "/elchel/static/media/instagram.a23709f5f6c2f6bed14d.png",
+    "static/media/paquetet.jpg": "/elchel/static/media/paquetet.18107cd8a777026ec25b.jpg",
+    "static/media/paega.jpg": "/elchel/static/media/paega.a0b48eebba85fe15a6cb.jpg",
+    "static/media/logos.png": "/elchel/static/media/logos.e3d8f5ecb48a58a40f31.png",
+    "static/media/miercoles.jpg": "/elchel/static/media/miercoles.b412fb799a6ee4301330.jpg",
+    "static/media/paellaa.jpg": "/elchel/static/media/paellaa.f3822dfeb447075a0a7a.jpg",
+    "static/media/orden.jpg": "/elchel/static/media/orden.3d719d3af90624526905.jpg",
+    "static/media/huevos.jpg": "/elchel/static/media/huevos.ec46433902ad1ab1e981.jpg",
+    "static/media/panuchos.jpg": "/elchel/static/media/panuchos.a60a416cbf4fb41cce16.jpg",
+    "static/media/poppins-latin-400-normal.woff": "/elchel/static/media/poppins-latin-400-normal.1458587c0aa7cd06b82b.woff",
+    "static/media/marquesitas.jpg": "/elchel/static/media/marquesitas.e6ee1c147ecae0daec68.jpg",
+    "static/media/horchata.jpg": "/elchel/static/media/horchata.56b9455f3dd3298668b6.jpg",
+    "static/media/poppins-latin-400-normal.woff2": "/elchel/static/media/poppins-latin-400-normal.405055dd680fa1dcdfa2.woff2",
+    "static/media/poppins-latin-ext-400-normal.woff": "/elchel/static/media/poppins-latin-ext-400-normal.7e12786771ac4a8e6a5c.woff",
+    "static/media/poppins-latin-ext-400-normal.woff2": "/elchel/static/media/poppins-latin-ext-400-normal.d7c074a9c34fe9785f69.woff2",
+    "index.html": "/elchel/index.html",
+    "main.d3721035.css.map": "/elchel/static/css/main.d3721035.css.map",
+    "main.9055f766.js.map": "/elchel/static/js/main.9055f766.js.map",
+    "488.5490d9a0.chunk.js.map": "/elchel/static/js/488.5490d9a0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d3721035.css",
+    "static/js/main.9055f766.js"
+  ]
+}
