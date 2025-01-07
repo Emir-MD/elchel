@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 // Importa tus imágenes
-import divorciadosImg from '../img/huevos.jpg';
-import molletesImg from '../img/molletes.jpg';
-import paella from '../img/paellaa.jpg';
-import chilaquilesBistecImg from '../img/chilaquiles.jpg';
-import huevosMexicanaImg from '../img/huevos.jpg';
-import cafeameri from '../img/cafeamericano.jpg';
-import cochinitaImg from '../img/cochinita.jpg';
-import panuchosImg from '../img/panuchos.jpg';
-import horchataImg from '../img/horchata.jpg';
-import flanImg from '../img/flan.jpg';
-import marquesitaImg from '../img/marquesitas.jpg';
+import divorciadosImg from '../../img/huevos.jpg';
+import molletesImg from '../../img/molletes.jpg';
+import paella from '../../img/paellaa.jpg';
+import chilaquilesBistecImg from '../../img/chilaquiles.jpg';
+import huevosMexicanaImg from '../../img/huevos.jpg';
+import cafeameri from '../../img/cafeamericano.jpg';
+import cochinitaImg from '../../img/cochinita.jpg';
+import panuchosImg from '../../img/panuchos.jpg';
+import horchataImg from '../../img/horchata.jpg';
+import flanImg from '../../img/flan.jpg';
+import marquesitaImg from '../../img/marquesitas.jpg';
 
-const Menu = () => {
+const MenuMesa = () => {
   const [selectedCategory, setSelectedCategory] = useState(null); // Mostrar todos inicialmente
 
   const dishes = [
@@ -257,4 +257,4 @@ const styles = {
   },
 };
 
-export default Menu;
+export default MenuMesa;

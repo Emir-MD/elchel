@@ -1,5 +1,4 @@
 import React from 'react';
-// Importa las imágenes desde la carpeta src/img
 import whatsappImg from '../img/Whatsapp.jpg';
 import promoImg from '../img/promo.png';
 
@@ -37,65 +36,92 @@ const BannerPromocional = () => {
 const styles = {
   banner: {
     display: 'flex',
-    flexDirection: 'column', // Alinea los elementos verticalmente en móviles
+    flexDirection: 'column', // Vertical en pantallas pequeñas
     alignItems: 'center',
     justifyContent: 'center',
-    padding: '1rem',
-    background: 'linear-gradient(to bottom, #ff9800, #ff6f00)', // Fondo degradado
+    padding: '2rem 1rem',
+    background: 'linear-gradient(to bottom, #ff9800, #ff6f00)',
     boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.2)',
     fontFamily: '"Arial", sans-serif',
     width: '100%',
+    maxWidth: '100vw', // Asegura que no haya desbordamiento horizontal
     margin: '0 auto',
-    height: 'auto', // Permite que la altura se ajuste al contenido
+    gap: '1.5rem', // Espaciado uniforme entre elementos
     borderRadius: '10px',
     overflow: 'hidden',
-    gap: '1rem', // Espaciado uniforme entre elementos
   },
   textContainer: {
-    textAlign: 'center', // Centra el texto
+    textAlign: 'center',
     color: '#fff',
     padding: '0 1rem',
   },
   mainText: {
-    fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', // Tamaño dinámico del título
+    fontSize: 'clamp(1.8rem, 5vw, 2.5rem)',
     fontWeight: 'bold',
-    marginBottom: '0.5rem',
+    marginBottom: '1rem',
   },
   subText: {
-    fontSize: 'clamp(1rem, 3vw, 1.2rem)', // Tamaño dinámico del subtítulo
+    fontSize: 'clamp(1rem, 3vw, 1.2rem)',
     marginBottom: '1rem',
   },
   callToAction: {
     display: 'inline-flex',
     alignItems: 'center',
-    justifyContent: 'center', // Centra el contenido del botón
+    justifyContent: 'center',
     backgroundColor: '#25d366',
     color: '#fff',
     textDecoration: 'none',
-    padding: '0.5rem 1rem',
-    borderRadius: '5px',
+    padding: '0.8rem 1.5rem', // Botón más grande
+    borderRadius: '8px',
     fontWeight: 'bold',
-    fontSize: 'clamp(0.8rem, 2vw, 1rem)', // Tamaño adaptativo
-    boxShadow: '0 2px 3px rgba(0, 0, 0, 0.2)',
+    fontSize: 'clamp(1rem, 2vw, 1.2rem)',
+    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)',
     gap: '0.5rem',
+    marginTop: '1rem',
   },
   icon: {
-    width: 'clamp(16px, 4vw, 20px)', // Tamaño dinámico del ícono
-    height: 'clamp(16px, 4vw, 20px)',
+    width: 'clamp(20px, 4vw, 24px)',
+    height: 'clamp(20px, 4vw, 24px)',
   },
   imageContainer: {
     display: 'flex',
-    justifyContent: 'center', // Centra la imagen
+    justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    padding: '1rem',
+    padding: '0', // Elimina padding extra
   },
   image: {
-    width: 'clamp(200px, 80%, 400px)', // Tamaño dinámico de la imagen
+    width: 'clamp(250px, 90%, 500px)', // Ajuste dinámico
     height: 'auto',
     objectFit: 'cover',
     borderRadius: '10px',
   },
+  // Media queries para pantallas más grandes
+  '@media (min-width: 768px)': {
+    banner: {
+      flexDirection: 'row', // Cambia a horizontal en pantallas medianas
+      padding: '3rem 2rem',
+      gap: '2rem',
+    },
+    textContainer: {
+      textAlign: 'left',
+      flex: 1, // Toma la mitad del espacio
+    },
+    imageContainer: {
+      flex: 1, // Toma la otra mitad
+    },
+    image: {
+      width: 'clamp(300px, 80%, 600px)', // Imagen más grande en pantallas amplias
+    },
+  },
 };
+
+// Solución global para el body y html
+document.body.style.margin = '0'; // Elimina márgenes globales
+document.body.style.padding = '0'; // Elimina padding global
+document.body.style.overflowX = 'hidden'; // Previene desbordamiento horizontal globalmente
+document.documentElement.style.margin = '0'; // Ajusta el html también
+document.documentElement.style.padding = '0';
+document.documentElement.style.overflowX = 'hidden';
 
 export default BannerPromocional;

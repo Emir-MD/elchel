@@ -1,5 +1,4 @@
 import React from 'react';
-import '@fontsource/changa';
 import '@fontsource/poppins';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../img/logos.png'; // Importa la imagen desde la carpeta "img"
@@ -63,94 +62,90 @@ const Navbar = () => {
               ...(location.pathname === '/contacto' && styles.activeLink),
             }}
           >
-           Contacto
+            Contacto
           </Link>
         </li>
       </ul>
     </nav>
   );
 };
-
 const styles = {
   navbar: {
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: '5px 1px',
+    padding: '10px 20px',
     backgroundColor: 'white',
     borderBottom: '3px solid #e76f51',
     width: '100%',
     top: 0,
     left: 0,
     zIndex: 1000, // Asegura que esté sobre otros elementos
-    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)', // Sombra para mejor visibilidad
+    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
   },
   logoContainer: {
-  display: 'flex',
-  justifyContent: 'center', // Centra horizontalmente dentro de su espacio
-  alignItems: 'center',
-  flex: '0 0 auto', // Evita que el logo se estire
-  paddingLeft: '100px', // Ajusta el espacio hacia la derecha
-},
-
+    display: 'flex',
+    justifyContent: 'center', // Centra el logo horizontalmente
+    alignItems: 'center',
+    flex: '0 0 auto', // Evita que el logo se estire
+    paddingLeft: '0', // Elimina el padding adicional
+  },
   logoImage: {
-    height: 'clamp(100px, 8vw, 80px)', // Tamaño dinámico del logo
-    width: 'auto',
+    height: 'clamp(80px, 12vw, 120px)', // Tamaño dinámico del logo
+    width: 'auto', // Mantiene las proporciones
   },
   navLinks: {
     display: 'flex',
-    flexWrap: 'wrap', // Permite que los enlaces bajen a otra línea si es necesario
+    flexWrap: 'wrap',
     listStyle: 'none',
     margin: 0,
     padding: 0,
-    gap: '15px', // Espaciado entre enlaces
+    gap: '10px', // Espaciado uniforme entre enlaces
     justifyContent: 'center',
     flex: 1,
   },
   link: {
     color: 'black',
     textDecoration: 'none',
-    fontSize: 'clamp(12px, 1.5vw, 18px)', // Tamaño dinámico
+    fontSize: 'clamp(18px, 1.2vw, 16px)', // Tamaño dinámico del texto
     textTransform: 'uppercase',
     fontFamily: 'Poppins, sans-serif',
-    padding: '5px 10px', // Espaciado interno
+    padding: '8px 12px',
     borderRadius: '4px',
     transition: 'color 0.3s, background-color 0.3s',
   },
   activeLink: {
-    color: '#fff', // Texto blanco para el enlace activo
-    backgroundColor: '#e76f51', // Fondo naranja para el enlace activo
-    borderBottom: 'none', // Elimina el subrayado en el enlace activo
+    color: '#fff',
+    backgroundColor: '#e76f51',
+    borderBottom: 'none',
   },
-
-  // Media queries
+  // Media queries para pantallas pequeñas
   '@media (max-width: 768px)': {
     navbar: {
-      flexDirection: 'column', // Los elementos se apilan
-      alignItems: 'flex-start', // Alineación a la izquierda
+      flexDirection: 'column',
+      alignItems: 'center', // Centra los elementos en pantallas pequeñas
     },
     navLinks: {
-      flexDirection: 'column', // Los enlaces se apilan
-      gap: '10px', // Espaciado reducido entre enlaces
+      flexDirection: 'column', // Alinea los enlaces verticalmente
+      gap: '8px',
     },
     link: {
-      fontSize: '14px', // Tamaño reducido en móviles
+      fontSize: 'clamp(12px, 2vw, 14px)', // Ajusta el tamaño del texto
     },
   },
-
   '@media (max-width: 480px)': {
     navbar: {
-      padding: '10px', // Reducción de padding en pantallas más pequeñas
+      padding: '10px',
     },
     logoImage: {
-      height: '60px', // Tamaño fijo para el logo
+      height: '40px', // Reduce el tamaño del logo en pantallas pequeñas
     },
     link: {
-      fontSize: '60px', // Tamaño aún más pequeño para pantallas pequeñas
-      padding: '5px',
+      fontSize: 'clamp(10px, 2.5vw, 12px)', // Ajusta el tamaño del texto en móviles
     },
   },
 };
+
 
 export default Navbar;

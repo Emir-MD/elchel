@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const Opiniones = () => {
+  // eslint-disable-next-line no-unused-vars
   const [opiniones, setOpiniones] = useState([
     {
       fecha: 'Hace 9 meses',
