@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/elchel/static/css/main.d3721035.css",
-    "main.js": "/elchel/static/js/main.97805105.js",
+    "main.js": "/elchel/static/js/main.b6450acb.js",
     "static/js/488.5490d9a0.chunk.js": "/elchel/static/js/488.5490d9a0.chunk.js",
     "static/media/ressuc3.png": "/elchel/static/media/ressuc3.2b05da598bea34d85e28.png",
     "static/media/paella.jpg": "/elchel/static/media/paella.d53677a7a38c75d59cbe.jpg",
@@ -28,11 +28,11 @@
     "static/media/poppins-latin-ext-400-normal.woff2": "/elchel/static/media/poppins-latin-ext-400-normal.d7c074a9c34fe9785f69.woff2",
     "index.html": "/elchel/index.html",
     "main.d3721035.css.map": "/elchel/static/css/main.d3721035.css.map",
-    "main.97805105.js.map": "/elchel/static/js/main.97805105.js.map",
+    "main.b6450acb.js.map": "/elchel/static/js/main.b6450acb.js.map",
     "488.5490d9a0.chunk.js.map": "/elchel/static/js/488.5490d9a0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d3721035.css",
-    "static/js/main.97805105.js"
+    "static/js/main.b6450acb.js"
   ]
 }
