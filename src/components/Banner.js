@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-// Importamos las imágenes correctamente desde src/img
-import paquetet from '../img/paquetet.jpg';
-import miercoles from '../img/miercoles.jpg';
-import paega from '../img/paega.jpg';
-import promos from '../img/promos.png';
 
 const Banner = () => {
-  // Lista de imágenes importadas
-  const images = [paquetet, miercoles, paega, promos];
+  // Lista de imágenes con rutas absolutas desde public
+  const images = [
+    '/img/paquetet.jpg',
+    '/img/miercoles.jpg',
+    '/img/paega.jpg',
+    '/img/promos.png',
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 

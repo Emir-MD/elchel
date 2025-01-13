@@ -1,7 +1,5 @@
 import React from 'react';
 import Footer from '../components/Contacto';
-import suc1 from '../img/suc1.png';
-import suc2 from '../img/suc2.png';
 
 const Sucursales = () => {
   const sucursales = [
@@ -12,7 +10,7 @@ const Sucursales = () => {
       horario: 'Lunes a Domingo: 8 AM - 10 PM',
       telefono: '55 9278 4907',
       mapsLink: 'https://www.google.com/maps/place/El+Chel/@19.2946679,-99.1366559,17z/data=!3m1!5s0x85ce01a70754d223:0x3809b5d7d88c2cdd!4m7!3m6!1s0x85ce01a7aa008ad5:0x6cfc1eebd37d3b2a!8m2!3d19.294668!4d-99.131785!10e1!16s%2Fg%2F1tw1f4wl?entry=ttu',
-      imagen: suc1,
+      imagen: '/img/suc1.png', // Ruta absoluta desde public
     },
     {
       id: 2,
@@ -21,7 +19,7 @@ const Sucursales = () => {
       horario: 'Lunes a Domingo: 8 AM - 10 PM',
       telefono: '55 9278 4907',
       mapsLink: 'https://www.google.com/maps/place/El+Chel/@19.294668,-99.1343599,17z/data=!3m2!4b1!5s0x85ce01a70754d223:0x3809b5d7d88c2cdd!4m6!3m5!1s0x85ce01a7aa008ad5:0x6cfc1eebd37d3b2a!8m2!3d19.294668!4d-99.131785!16s%2Fg%2F1tw1f4wl?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D',
-      imagen: suc2,
+      imagen: '/img/suc2.png', // Ruta absoluta desde public
     },
   ];
 
@@ -103,11 +101,10 @@ const styles = {
     height: 'auto',
     borderRadius: '8px',
     marginTop: '0.5rem',
-    display: 'block', // Asegura que la imagen se comporte como un bloque
-    marginLeft: 'auto', // Centra horizontalmente
-    marginRight: 'auto', // Centra horizontalmente
+    display: 'block',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
-  
 };
 
 export default Sucursales;

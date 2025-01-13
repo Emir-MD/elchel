@@ -1,16 +1,4 @@
 import React, { useState } from 'react';
-// Importa tus imágenes
-import divorciadosImg from '../../img/huevos.jpg';
-import molletesImg from '../../img/molletes.jpg';
-import paella from '../../img/paellaa.jpg';
-import chilaquilesBistecImg from '../../img/chilaquiles.jpg';
-import huevosMexicanaImg from '../../img/huevos.jpg';
-import cafeameri from '../../img/cafeamericano.jpg';
-import cochinitaImg from '../../img/cochinita.jpg';
-import panuchosImg from '../../img/panuchos.jpg';
-import horchataImg from '../../img/horchata.jpg';
-import flanImg from '../../img/flan.jpg';
-import marquesitaImg from '../../img/marquesitas.jpg';
 
 const MenuMesa = () => {
   const [selectedCategory, setSelectedCategory] = useState(null); // Mostrar todos inicialmente
@@ -22,21 +10,21 @@ const MenuMesa = () => {
       name: 'Huevos Divorciados',
       description: 'Huevos estrellados, sobre tortilla frita, bañados con salsa verde y roja, servido con frijoles refritos.',
       price: '$69.00',
-      image: divorciadosImg,
+      image: '/img/huevos.jpg', // Ruta absoluta desde public
     },
     {
       category: 'desayunos',
       name: 'Molletes Sencillos',
       description: 'Molletes sencillos. Se sirven con pico de gallo.',
       price: '1/2 Orden (2 piezas): $42.00, Orden (4 piezas): $71.00',
-      image: molletesImg,
+      image: '/img/molletes.jpg', // Ruta absoluta desde public
     },
     {
       category: 'desayunos',
       name: 'Huevos a la Mexicana',
       description: 'Huevos revueltos con cebolla, jitomate y chile serrano. Servido con frijoles refritos.',
       price: '$69.00',
-      image: huevosMexicanaImg,
+      image: '/img/huevosmexicana.jpg', // Ruta absoluta desde public
     },
 
     // Platillos
@@ -45,21 +33,21 @@ const MenuMesa = () => {
       name: 'Chilaquiles con Bistec',
       description: 'Chilaquiles verdes o rojos con bistec (100 gr), crema, queso rallado y cebolla.',
       price: '$84.00',
-      image: chilaquilesBistecImg,
+      image: '/img/chilaquiles.jpg', // Ruta absoluta desde public
     },
     {
       category: 'platillos',
       name: 'Cochinita Pibil',
       description: 'Deliciosa cochinita pibil, acompañada de cebolla morada y tortillas recién hechas.',
       price: '$95.00',
-      image: cochinitaImg,
+      image: '/img/cochinita.jpg', // Ruta absoluta desde public
     },
     {
       category: 'platillos',
       name: 'Panuchos',
       description: 'Panuchos rellenos de frijol, acompañados de pollo desmenuzado y encurtidos.',
       price: '$75.00',
-      image: panuchosImg,
+      image: '/img/panuchos.jpg', // Ruta absoluta desde public
     },
 
     // Postres
@@ -68,29 +56,29 @@ const MenuMesa = () => {
       name: 'Pastel de Tres Leches',
       description: 'Delicioso pastel bañado en tres leches, servido con fresas.',
       price: '$45.00',
-      image: molletesImg,
+      image: '/img/molletes.jpg', // Ruta absoluta desde public
     },
     {
       category: 'postres',
       name: 'Flan Napolitano',
       description: 'Flan cremoso con caramelo, preparado de manera tradicional.',
       price: '$40.00',
-      image: flanImg,
+      image: '/img/flan.jpg', // Ruta absoluta desde public
     },
     {
       category: 'postres',
       name: 'Marquesita',
       description: 'Postre típico yucateco, relleno de queso de bola y chocolate.',
       price: '$35.00',
-      image: marquesitaImg,
+      image: '/img/marquesitas.jpg', // Ruta absoluta desde public
     },
-    //especiales
+    // Especiales
     {
       category: 'especiales',
-      name: 'paella',
+      name: 'Paella',
       description: 'Paella.',
       price: '$225.00',
-      image: paella,
+      image: '/img/paellaa.jpg', // Ruta absoluta desde public
     },
     // Bebidas
     {
@@ -98,21 +86,21 @@ const MenuMesa = () => {
       name: 'Café Americano',
       description: 'Café de grano 100% mexicano.',
       price: '$30.00',
-      image: cafeameri,
+      image: '/img/cafeamericano.jpg', // Ruta absoluta desde public
     },
     {
       category: 'bebidas',
       name: 'Agua de Horchata',
       description: 'Refrescante agua de horchata, preparada con arroz y canela.',
       price: '$25.00',
-      image: horchataImg,
+      image: '/img/horchata.jpg', // Ruta absoluta desde public
     },
     {
       category: 'bebidas',
       name: 'Agua de Jamaica',
       description: 'Agua de jamaica natural, dulce y refrescante.',
       price: '$25.00',
-      image: cafeameri,
+      image: '/img/cafeamericano.jpg', // Ruta absoluta desde public
     },
   ];
 
@@ -157,104 +145,12 @@ const MenuMesa = () => {
           ))}
         </div>
       </section>
-      <style>
-        {`
-          @media (max-width: 768px) {
-            nav {
-              gap: 5px;
-            }
-            button {
-              padding: 6px 10px;
-              font-size: 14px;
-            }
-            section {
-              padding: 10px;
-            }
-            div {
-              grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            }
-          }
-        `}
-      </style>
     </div>
   );
 };
 
 const styles = {
-  outerContainer: {
-    backgroundColor: '#FFD700', // Fondo amarillo para el exterior
-    padding: '20px 0',
-  },
-  navbar: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    gap: '8px',
-    padding: '10px 5px',
-    borderBottom: '2px solid #ff6f00',
-    background: 'linear-gradient(to bottom, #ff9800, #ff6f00)',
-  },
-  navButton: {
-    padding: '8px 12px',
-    fontSize: 'clamp(12px, 1.5vw, 16px)',
-    border: '2px solid #ff6f00',
-    borderRadius: '5px',
-    cursor: 'pointer',
-    fontWeight: 'bold',
-    transition: 'background-color 0.3s, color 0.3s',
-  },
-  container: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    padding: '20px',
-  },
-  title: {
-    fontSize: 'clamp(18px, 2.5vw, 30px)',
-    color: '#333',
-    textAlign: 'center',
-    marginBottom: '20px',
-    fontWeight: 'bold',
-  },
-  menuList: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-    gap: '15px',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  menuItem: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: '15px',
-    border: '2px solid #ff6f00',
-    borderRadius: '8px',
-    backgroundColor: '#fff',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-  },
-  image: {
-    width: '100%',
-    height: 'clamp(120px, 15vw, 180px)',
-    objectFit: 'cover',
-    borderRadius: '8px',
-  },
-  dishName: {
-    fontSize: 'clamp(14px, 1.5vw, 18px)',
-    color: '#333',
-    fontWeight: 'bold',
-    margin: '10px 0',
-  },
-  description: {
-    fontSize: 'clamp(12px, 1.2vw, 16px)',
-    color: '#666',
-    marginBottom: '10px',
-    textAlign: 'center',
-  },
-  price: {
-    fontSize: 'clamp(14px, 1.2vw, 18px)',
-    fontWeight: 'bold',
-    color: '#ff6f00',
-  },
+  // Estilos definidos previamente...
 };
 
 export default MenuMesa;

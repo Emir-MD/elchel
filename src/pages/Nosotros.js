@@ -1,8 +1,5 @@
 import React from 'react';
 import Footer from '../components/Contacto'; // Asegúrate de que la ruta sea correcta
-import lugar1 from '../img/ressuc1.jpg'; // Reemplaza con la imagen correcta
-import lugar2 from '../img/ressuc2.jpg'; // Reemplaza con la imagen correcta
-import lugar3 from '../img/ressuc3.png'; // Reemplaza con la imagen correcta
 
 const Nosotros = () => {
   return (
@@ -18,7 +15,7 @@ const Nosotros = () => {
         </div>
         <div style={styles.imageContainer}>
           <img
-            src={lugar1}
+            src="/img/ressuc1.jpg" // Ruta absoluta
             alt="Imagen del lugar"
             style={styles.image}
           />
@@ -29,7 +26,7 @@ const Nosotros = () => {
       <div style={styles.sectionReverse}>
         <div style={styles.imageContainer}>
           <img
-            src={lugar2}
+            src="/img/ressuc2.jpg" // Ruta absoluta
             alt="Otra vista del lugar"
             style={styles.image}
           />
@@ -50,12 +47,10 @@ const Nosotros = () => {
         </div>
         <div style={styles.imageContainer}>
           <img
-            src={lugar3}
-            style={styles.image}
+            src="/img/ressuc3.png" // Ruta absoluta
             alt="Descripción de la imagen"
-
+            style={styles.image}
           />
-          
         </div>
       </div>
 
@@ -63,7 +58,7 @@ const Nosotros = () => {
       <div style={styles.sectionReverse}>
         <div style={styles.imageContainer}>
           <img
-            src={lugar1}
+            src="/img/ressuc1.jpg" // Ruta absoluta
             alt="Otra vista del lugar"
             style={styles.image}
           />

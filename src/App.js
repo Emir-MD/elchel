@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom'; // No `Router` aquí
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import BannerPromocional from './components/BannerPromocional';
@@ -14,22 +14,24 @@ import Terminos from './pages/Terminos';
 
 const App = () => {
   const location = useLocation();
-  const [animationStyle, setAnimationStyle] = useState({ opacity: 0, transform: 'translateY(30px)' });
+  const [animationStyle, setAnimationStyle] = useState({
+    opacity: 0,
+    transform: 'translateY(30px)',
+  });
 
   useEffect(() => {
-    setAnimationStyle({ opacity: 0, transform: 'translateY(30px)' }); // Reinicia la animación
+    setAnimationStyle({ opacity: 0, transform: 'translateY(30px)' });
     const timeout = setTimeout(() => {
       setAnimationStyle({ opacity: 1, transform: 'translateY(0)', transition: 'all 0.6s ease-out' });
-    }, 100); // Retraso para hacer visible la animación
+    }, 100);
     return () => clearTimeout(timeout);
   }, [location]);
 
   return (
     <>
       <Navbar />
-      <div style={{  ...animationStyle }}>
+      <div style={{ ...animationStyle }}>
         <Routes>
-          {/* Página principal */}
           <Route
             path="/"
             element={
@@ -42,7 +44,6 @@ const App = () => {
               </>
             }
           />
-          {/* Otras páginas */}
           <Route path="/sucursales" element={<Sucursales />} />
           <Route path="/menu" element={<MainMenu />} />
           <Route path="/menuMesa" element={<MenuMesa />} />
@@ -55,7 +56,5 @@ const App = () => {
     </>
   );
 };
-
-
 
 export default App;

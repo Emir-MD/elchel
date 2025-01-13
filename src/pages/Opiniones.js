@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 const Opiniones = () => {
-  // eslint-disable-next-line no-unused-vars
   const [opiniones, setOpiniones] = useState([
     {
       fecha: 'Hace 9 meses',
@@ -55,7 +54,13 @@ const Opiniones = () => {
     <div style={styles.container}>
       <h1 style={styles.title}>Opiniones de Nuestros Clientes</h1>
       <div style={styles.sliderWrapper}>
-        <button onClick={handlePrev} style={{ ...styles.navButton, ...styles.navButtonLeft }}>&lt;</button>
+        <button
+          onClick={handlePrev}
+          style={{ ...styles.navButton, ...styles.navButtonLeft }}
+          aria-label="Anterior opinión"
+        >
+          &lt;
+        </button>
         <div style={styles.sliderContainer}>
           <div
             style={{
@@ -73,7 +78,13 @@ const Opiniones = () => {
             ))}
           </div>
         </div>
-        <button onClick={handleNext} style={{ ...styles.navButton, ...styles.navButtonRight }}>&gt;</button>
+        <button
+          onClick={handleNext}
+          style={{ ...styles.navButton, ...styles.navButtonRight }}
+          aria-label="Siguiente opinión"
+        >
+          &gt;
+        </button>
       </div>
     </div>
   );
@@ -81,56 +92,58 @@ const Opiniones = () => {
 
 const styles = {
   container: {
-    padding: '10px',
+    padding: '20px',
     fontFamily: 'Arial, sans-serif',
     textAlign: 'center',
     background: 'linear-gradient(to bottom, #ff9800, #ff6f00)', // Fondo degradado
     minHeight: 'auto',
+    borderRadius: '10px',
   },
   title: {
-    fontSize: '1.5rem',
+    fontSize: 'clamp(1.5rem, 5vw, 2rem)',
     color: '#fff',
-    marginBottom: '15px',
+    marginBottom: '20px',
   },
   sliderWrapper: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
-    marginBottom: '15px',
+    marginBottom: '20px',
   },
   sliderContainer: {
-    width: '70%',
+    width: '80%',
     overflow: 'hidden',
+    borderRadius: '10px',
   },
   slider: {
     display: 'flex',
     transition: 'transform 0.5s ease-in-out',
   },
   opinionCard: {
-    width: '200px',
-    margin: '0 5px',
+    width: '250px',
+    margin: '0 10px',
     border: '1px solid #ddd',
-    borderRadius: '8px',
-    padding: '10px',
-    boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+    borderRadius: '10px',
+    padding: '15px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
     backgroundColor: '#fff',
     textAlign: 'center',
   },
   fecha: {
-    fontSize: '0.8rem',
+    fontSize: '0.9rem',
     color: '#555',
     marginBottom: '5px',
   },
   titulo: {
-    fontSize: '1rem',
+    fontSize: '1.2rem',
     color: '#333',
-    marginBottom: '8px',
+    marginBottom: '10px',
   },
   descripcion: {
-    fontSize: '0.9rem',
+    fontSize: '1rem',
     color: '#666',
-    marginBottom: '8px',
+    marginBottom: '10px',
   },
   estrellas: {
     fontSize: '1rem',
@@ -140,29 +153,30 @@ const styles = {
     backgroundColor: '#FFA726',
     color: '#fff',
     border: 'none',
-    padding: '8px 12px',
+    padding: '10px 15px',
     cursor: 'pointer',
-    borderRadius: '5px',
-    fontSize: '0.8rem',
+    borderRadius: '50%',
+    fontSize: '1rem',
     position: 'absolute',
     top: '50%',
     transform: 'translateY(-50%)',
+    boxShadow: '0 2px 5px rgba(0,0,0,0.3)',
   },
   navButtonLeft: {
-    left: '-20px',
+    left: '-30px',
   },
   navButtonRight: {
-    right: '-20px',
+    right: '-30px',
   },
   '@media (max-width: 768px)': {
     sliderContainer: {
-      width: '80%',
+      width: '90%',
     },
     opinionCard: {
-      width: '160px',
+      width: '200px',
     },
     navButton: {
-      padding: '6px 8px',
+      padding: '8px 12px',
     },
   },
   '@media (max-width: 480px)': {
@@ -170,10 +184,10 @@ const styles = {
       fontSize: '1.2rem',
     },
     opinionCard: {
-      width: '140px',
+      width: '180px',
     },
     navButton: {
-      padding: '5px 7px',
+      padding: '6px 10px',
     },
   },
 };

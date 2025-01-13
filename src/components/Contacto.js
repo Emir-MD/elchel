@@ -1,9 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../img/logos.png';
-import instagramLogo from '../img/instagram.png';
-import facebookLogo from '../img/facebook.jpg';
-import whatsappLogo from '../img/Whatsapp.jpg';
 
 const Contacto = () => {
   return (
@@ -11,7 +7,7 @@ const Contacto = () => {
       <div style={styles.container}>
         {/* Logo y slogan */}
         <div style={styles.column}>
-          <img src={logo} alt="El Chel Logo" style={styles.logo} />
+          <img src="/img/logos.png" alt="El Chel Logo" style={styles.logo} />
           <p style={styles.slogan}>La Casa de Todos</p>
         </div>
 
@@ -33,29 +29,27 @@ const Contacto = () => {
           </ul>
         </div>
 
-{/* Enlaces de navegación */}
-<div style={styles.column}>
-  <h3 style={styles.title}>Conócenos</h3>
-  <ul style={styles.list}>
-    <li>
-      <Link to="/nosotros" style={styles.link}>
-        Nosotros
-      </Link>
-    </li>
-    <li>
-      <Link to="/opiniones" style={styles.link}>
-        Opiniones
-      </Link>
-    </li>
-    <li>
-      <Link to="/terminos" style={styles.link}>
-        Términos y Condiciones
-      </Link>
-    </li>
-  </ul>
-</div>
-
-
+        {/* Enlaces de navegación */}
+        <div style={styles.column}>
+          <h3 style={styles.title}>Conócenos</h3>
+          <ul style={styles.list}>
+            <li>
+              <Link to="/nosotros" style={styles.link}>
+                Nosotros
+              </Link>
+            </li>
+            <li>
+              <Link to="/opiniones" style={styles.link}>
+                Opiniones
+              </Link>
+            </li>
+            <li>
+              <Link to="/terminos" style={styles.link}>
+                Términos y Condiciones
+              </Link>
+            </li>
+          </ul>
+        </div>
 
         {/* Redes sociales */}
         <div style={styles.column}>
@@ -63,17 +57,17 @@ const Contacto = () => {
           <ul style={styles.list}>
             <li>
               <a href="https://instagram.com/tu_restaurante" target="_blank" rel="noopener noreferrer" style={styles.link}>
-                <img src={instagramLogo} alt="Instagram" style={styles.icon} /> Instagram
+                <img src="/img/instagram.png" alt="Instagram" style={styles.icon} /> Instagram
               </a>
             </li>
             <li>
               <a href="https://facebook.com/tu_restaurante" target="_blank" rel="noopener noreferrer" style={styles.link}>
-                <img src={facebookLogo} alt="Facebook" style={styles.icon} /> Facebook
+                <img src="/img/facebook.jpg" alt="Facebook" style={styles.icon} /> Facebook
               </a>
             </li>
             <li>
               <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" style={styles.link}>
-                <img src={whatsappLogo} alt="WhatsApp" style={styles.icon} /> WhatsApp
+                <img src="/img/Whatsapp.jpg" alt="WhatsApp" style={styles.icon} /> WhatsApp
               </a>
             </li>
           </ul>
@@ -124,10 +118,6 @@ const styles = {
     cursor: 'pointer',
     position: 'relative',
     transition: 'all 0.3s', // Transición suave
-  },
-  linkHover: {
-    textDecoration: 'underline',
-    color: '#ff6f00',
   },
   logo: {
     width: '150px',

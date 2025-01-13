@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logos from '../../img/logos.png'; // Asegúrate de que esta ruta sea correcta
 
 const MainMenu = () => {
   const [showOptions, setShowOptions] = useState(false); // Estado para mostrar las opciones
@@ -13,7 +12,7 @@ const MainMenu = () => {
   return (
     <div style={styles.page}>
       <div style={styles.container}>
-        <img src={logos} alt="Logo" style={styles.logo} />
+        <img src="/img/logos.png" alt="Logo" style={styles.logo} /> {/* Ruta absoluta */}
         <h1 style={styles.title}>Bienvenido</h1>
         {!showOptions && (
           <button style={styles.button} onClick={toggleOptions}>

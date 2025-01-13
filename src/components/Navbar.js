@@ -1,7 +1,6 @@
 import React from 'react';
 import '@fontsource/poppins';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../img/logos.png'; // Importa la imagen desde la carpeta "img"
 
 const Navbar = () => {
   const location = useLocation(); // Obtiene la ruta actual
@@ -11,9 +10,7 @@ const Navbar = () => {
       {/* Contenedor del logo */}
       <div style={styles.logoContainer}>
         <Link to="/">
-          <img
-            src={logo} // Utiliza la variable importada
-            alt="El Chel Logo"
+          <img src="/img/logos.png" alt="El Chel Logo"
             style={styles.logoImage}
           />
         </Link>
@@ -69,6 +66,7 @@ const Navbar = () => {
     </nav>
   );
 };
+
 const styles = {
   navbar: {
     display: 'flex',
@@ -86,14 +84,14 @@ const styles = {
   },
   logoContainer: {
     display: 'flex',
-    justifyContent: 'center', // Centra el logo horizontalmente
+    justifyContent: 'center',
     alignItems: 'center',
-    flex: '0 0 auto', // Evita que el logo se estire
-    paddingLeft: '0', // Elimina el padding adicional
+    flex: '0 0 auto',
+    paddingLeft: '0',
   },
   logoImage: {
-    height: 'clamp(80px, 12vw, 120px)', // Tamaño dinámico del logo
-    width: 'auto', // Mantiene las proporciones
+    height: 'clamp(80px, 12vw, 120px)',
+    width: 'auto',
   },
   navLinks: {
     display: 'flex',
@@ -101,14 +99,14 @@ const styles = {
     listStyle: 'none',
     margin: 0,
     padding: 0,
-    gap: '10px', // Espaciado uniforme entre enlaces
+    gap: '10px',
     justifyContent: 'center',
     flex: 1,
   },
   link: {
     color: 'black',
     textDecoration: 'none',
-    fontSize: 'clamp(18px, 1.2vw, 16px)', // Tamaño dinámico del texto
+    fontSize: 'clamp(18px, 1.2vw, 16px)',
     textTransform: 'uppercase',
     fontFamily: 'Poppins, sans-serif',
     padding: '8px 12px',
@@ -120,18 +118,17 @@ const styles = {
     backgroundColor: '#e76f51',
     borderBottom: 'none',
   },
-  // Media queries para pantallas pequeñas
   '@media (max-width: 768px)': {
     navbar: {
       flexDirection: 'column',
-      alignItems: 'center', // Centra los elementos en pantallas pequeñas
+      alignItems: 'center',
     },
     navLinks: {
-      flexDirection: 'column', // Alinea los enlaces verticalmente
+      flexDirection: 'column',
       gap: '8px',
     },
     link: {
-      fontSize: 'clamp(12px, 2vw, 14px)', // Ajusta el tamaño del texto
+      fontSize: 'clamp(12px, 2vw, 14px)',
     },
   },
   '@media (max-width: 480px)': {
@@ -139,13 +136,12 @@ const styles = {
       padding: '10px',
     },
     logoImage: {
-      height: '40px', // Reduce el tamaño del logo en pantallas pequeñas
+      height: '40px',
     },
     link: {
-      fontSize: 'clamp(10px, 2.5vw, 12px)', // Ajusta el tamaño del texto en móviles
+      fontSize: 'clamp(10px, 2.5vw, 12px)',
     },
   },
 };
-
 
 export default Navbar;

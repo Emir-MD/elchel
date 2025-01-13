@@ -1,6 +1,4 @@
 import React from 'react';
-import whatsappImg from '../img/Whatsapp.jpg';
-import promoImg from '../img/promo.png';
 
 const BannerPromocional = () => {
   return (
@@ -15,7 +13,7 @@ const BannerPromocional = () => {
           style={styles.callToAction}
         >
           <img
-            src={whatsappImg}
+            src="/img/Whatsapp.jpg" // Ruta absoluta para la imagen de WhatsApp
             alt="WhatsApp"
             style={styles.icon}
           />
@@ -24,7 +22,7 @@ const BannerPromocional = () => {
       </div>
       <div style={styles.imageContainer}>
         <img
-          src={promoImg}
+          src="/img/promo.png" // Ruta absoluta para la imagen de promoción
           alt="Promoción"
           style={styles.image}
         />
@@ -96,7 +94,6 @@ const styles = {
     objectFit: 'cover',
     borderRadius: '10px',
   },
-  // Media queries para pantallas más grandes
   '@media (min-width: 768px)': {
     banner: {
       flexDirection: 'row', // Cambia a horizontal en pantallas medianas

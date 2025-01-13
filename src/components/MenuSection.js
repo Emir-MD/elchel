@@ -1,25 +1,21 @@
 import React from 'react';
-// Importa las imágenes de los platillos desde src/img
-import cochinitaImage from '../img/orden.jpg';
-import paellaImage from '../img/paella.jpg';
-import rellenoNegroImage from '../img/rollonegro.jpg';
 
 const MenuSection = () => {
   const dishes = [
     { 
       name: 'Orden de cochinita', 
       price: '$97.00 MXN', 
-      image: cochinitaImage 
+      image: '/img/orden.jpg' // Ruta absoluta desde public
     },
     { 
       name: 'Paella', 
       price: '$103.00 MXN', 
-      image: paellaImage 
+      image: '/img/paella.jpg' // Ruta absoluta desde public
     },
     { 
       name: 'Tacos de relleno negro',  
       price: '$102.00 MXN', 
-      image: rellenoNegroImage 
+      image: '/img/rollonegro.jpg' // Ruta absoluta desde public
     },
   ];
 
