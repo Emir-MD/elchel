@@ -5,24 +5,62 @@ const Sucursales = () => {
   const sucursales = [
     {
       id: 1,
-      nombre: 'Cañaverales 39',
-      direccion: 'Cañaverales 39, Coapa, Magisterial, Tlalpan, 14330 Ciudad de México, CDMX',
-      horario: 'Lunes a Domingo: 8 AM - 10 PM',
-      telefono: '55 9278 4907',
-      mapsLink: 'https://www.google.com/maps/place/El+Chel/@19.2946679,-99.1366559,17z/data=!3m1!5s0x85ce01a70754d223:0x3809b5d7d88c2cdd!4m7!3m6!1s0x85ce01a7aa008ad5:0x6cfc1eebd37d3b2a!8m2!3d19.294668!4d-99.131785!10e1!16s%2Fg%2F1tw1f4wl?entry=ttu',
-      imagen: '/img/suc1.png', // Ruta absoluta desde public
+      nombre: "Matriz",
+      direccion: "Av. División del Nte. 4405, Coapa, Ex de San Juan de Dios, Tlalpan, CDMX",
+      horario: "Lunes a Domingo: 8 AM - 10 PM",
+      telefono: "55 6603 0293",
+      whatsapp: "55 7511 0551",
+       mapsLink: "https://www.google.com/maps/place/El+Chel/@19.294668,-99.1413122,16z/data=!3m1!5s0x85ce01a70754d223:0x3809b5d7d88c2cdd!4m10!1m2!2m1!1sel+chel!3m6!1s0x85ce01a7aa008ad5:0x6cfc1eebd37d3b2a!8m2!3d19.294668!4d-99.131785!15sCgdlbCBjaGVsWgkiB2VsIGNoZWySARJtZXhpY2FuX3Jlc3RhdXJhbnTgAQA!16s%2Fg%2F1tw1f4wl?entry=ttu&g_ep=EgoyMDI1MDExMC4wIKXMDSoASAFQAw%3D%3D",
+      imagen: "/img/suc1.png"
     },
     {
       id: 2,
-      nombre: 'Av. División del Nte.',
-      direccion: 'Av. División del Nte. 4405, Coapa, Ex de San Juan de Dios, Tlalpan, 14357 Tlalpan, CDMX',
-      horario: 'Lunes a Domingo: 8 AM - 10 PM',
-      telefono: '55 9278 4907',
-      mapsLink: 'https://www.google.com/maps/place/El+Chel/@19.294668,-99.1343599,17z/data=!3m2!4b1!5s0x85ce01a70754d223:0x3809b5d7d88c2cdd!4m6!3m5!1s0x85ce01a7aa008ad5:0x6cfc1eebd37d3b2a!8m2!3d19.294668!4d-99.131785!16s%2Fg%2F1tw1f4wl?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D',
-      imagen: '/img/suc2.png', // Ruta absoluta desde public
+      nombre: "Cuemanco",
+      direccion: "Cañaverales 39, Coapa, Magisterial, Tlalpan, CDMX",
+      horario: "Lunes a Domingo: 8 AM - 10 PM",
+      telefono: "55 9278 4907",
+      whatsapp: "55 7181 0812",
+      // mapsLink: "https://www.google.com/maps/place/Cuemanco",
+      // imagen: "/img/cuemanco.png"
     },
+    {
+      id: 3,
+      nombre: "Mercado Villa Coapa",
+      direccion: "Av. Canal De Miramontes S/N, Local 59, Tlalpan, CDMX",
+      horario: "Lunes a Domingo: 8 AM - 10 PM",
+      telefono: "55 5671 3059",
+      // mapsLink: "https://www.google.com/maps/place/Mercado+Villa+Coapa",
+      // imagen: "/img/mercado-villa-coapa.png"
+    },
+    {
+      id: 4,
+      nombre: "Club de Golf",
+      direccion: "Miguel Hidalgo Esq. C. Club de Golf, Arenal Tepepan, Tlalpan, CDMX",
+      horario: "Lunes a Domingo: 8 AM - 10 PM",
+      telefono: "55 4958 0070",
+      // mapsLink: "https://www.google.com/maps/place/Club+de+Golf",
+      // imagen: "/img/club-de-golf.png"
+    },
+    {
+      id: 5,
+      nombre: "San Jerónimo Totalplay",
+      direccion: "Av. San Jerónimo 252, Tizapán San Ángel, La Otra Banda, Coyoacán, CDMX",
+      horario: "Lunes a Domingo: 8 AM - 10 PM",
+      telefono: "55 6234 1811",
+      // mapsLink: "https://www.google.com/maps/place/San+Jerónimo+Totalplay",
+      // imagen: "/img/san-jeronimo.png"
+    },
+    {
+      id: 6,
+      nombre: "Mercado de la Paz - La Casa del Frijol",
+      direccion: "Centro Histórico de Tlalpan, Local 35 y 36, Tlalpan Centro, CDMX",
+      horario: "Lunes a Domingo: 8 AM - 10 PM",
+      telefono: "55 6234 1811",
+      mapsLink: "https://www.google.com/maps/place/Mercado+de+la+Paz",
+      // imagen: "/img/mercado-de-la-paz.png"
+    }
   ];
-
+  
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>Nuestras Sucursales</h1>

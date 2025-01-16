@@ -29,7 +29,7 @@ const MainMenu = () => {
             </button>
             <button
               style={styles.optionButton}
-              onClick={() => navigate('/menuPedidos')}
+              onClick={() => navigate('/MenuParaLlevar')}
             >
               Menú de Pedidos
             </button>

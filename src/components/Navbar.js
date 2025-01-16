@@ -80,7 +80,7 @@ const styles = {
     top: 0,
     left: 0,
     zIndex: 1000, // Asegura que esté sobre otros elementos
-    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+    boxShadow: '0 2px 5px rgba(255, 243, 8, 0.1)',
   },
   logoContainer: {
     display: 'flex',
