@@ -12,7 +12,7 @@ const MainMenu = () => {
   return (
     <div style={styles.page}>
       <div style={styles.container}>
-        <img src="/img/logos.png" alt="Logo" style={styles.logo} /> {/* Ruta absoluta */}
+        <img src="/img/Menuelchel/chel logo.png" alt="Logo" style={styles.logo} /> {/* Ruta absoluta */}
         <h1 style={styles.title}>Bienvenido</h1>
         {!showOptions && (
           <button style={styles.button} onClick={toggleOptions}>
