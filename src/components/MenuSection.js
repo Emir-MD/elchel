@@ -5,16 +5,17 @@ const MenuSection = () => {
   const dishes = [
     { 
       name: 'Orden de cochinita', 
-      price: '$97.00 MXN', 
+      description: 'Deliciosa cochinita pibil preparada al estilo tradicional yucateco, acompañada de cebolla morada y tortillas.', 
       image: '/img/panuchos.jpg' // Ruta absoluta desde public
     },
     { 
       name: 'Paella', 
+      description: 'Paella española con una combinación de mariscos, pollo y verduras, preparada con especias auténticas.', 
       image: '/img/Menuelchel/paella.JPG' // Ruta absoluta desde public
     },
     { 
       name: 'Tacos de relleno negro',  
-      price: '$102.00 MXN', 
+      description: 'Tacos con relleno negro, un guiso tradicional de la península de Yucatán, servido con tortillas frescas.', 
       image: '/img/rollonegro.jpg' // Ruta absoluta desde public
     },
   ];
@@ -32,7 +33,7 @@ const MenuSection = () => {
             />
             <div className="cardContent">
               <h4 className="cardTitle">{dish.name}</h4>
-              <p className="cardPrice">{dish.price}</p>
+              <p className="cardPrice">{dish.description}</p>
             </div>
           </div>
         ))}
@@ -46,10 +47,9 @@ const StyledMenuSection = styled.section`
   background-color: white;
   color: #ff6f00;
   text-align: center;
-  margin-top: 100px;
 
   .title {
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 20px;
   }
 
