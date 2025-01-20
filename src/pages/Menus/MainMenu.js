@@ -53,6 +53,8 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    marginTop: '100px', // Añadido para evitar superposición con el Navbar
+
     justifyContent: 'center',
     width: '400px',
     background: 'linear-gradient(to bottom, #ff9800, #ff6f00)',

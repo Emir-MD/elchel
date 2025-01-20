@@ -1,195 +1,155 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 
 const Opiniones = () => {
   const [opiniones, setOpiniones] = useState([
     {
-      fecha: 'Hace 9 meses',
+      fecha: new Date('2023-04-01'),
       titulo: 'Excelente pozole',
       descripcion: 'Excelente comida mexicana a pesar de ser una cadena grande los sabores son exquisitos y los locales mantienen el lugar siempre lleno.',
       estrellas: 5,
     },
     {
-      fecha: 'Hace 1 año',
+      fecha: new Date('2022-12-01'),
       titulo: 'Buena experiencia en El Chel',
       descripcion: 'Muy buena comida, barata y el servicio es muy rápido. Recomiendo ampliamente.',
       estrellas: 4,
     },
     {
-      fecha: 'Hace 2 años',
+      fecha: new Date('2021-10-15'),
       titulo: '100% recomendable',
       descripcion: 'El Chel es espectacular en todo, calidad y sazón de alimentos, personal muy calificado y amable.',
       estrellas: 5,
     },
     {
-      fecha: 'Hace 3 meses',
+      fecha: new Date('2023-09-01'),
       titulo: 'Delicioso y rápido',
       descripcion: 'El servicio fue muy rápido y la comida deliciosa. Definitivamente regresaré.',
       estrellas: 5,
     },
     {
-      fecha: 'Hace 6 meses',
+      fecha: new Date('2023-07-01'),
       titulo: 'Buen precio y calidad',
       descripcion: 'Precios justos y excelente sabor en todos los platillos. Altamente recomendable.',
       estrellas: 4,
     },
     {
-      fecha: 'Hace 1 semana',
+      fecha: new Date('2023-12-01'),
       titulo: 'Me encanta',
       descripcion: 'La cochinita es mi favorita. El lugar está limpio y el personal es muy amable.',
       estrellas: 5,
     },
   ]);
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + opiniones.length) % opiniones.length);
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % opiniones.length);
+  const getRelativeTime = (date) => {
+    const now = new Date();
+    const diff = Math.floor((now - date) / (1000 * 60 * 60 * 24)); // Diferencia en días
+    if (diff < 1) return 'hoy';
+    if (diff === 1) return 'hace 1 día';
+    if (diff < 30) return `hace ${diff} días`;
+    const months = Math.floor(diff / 30);
+    if (months === 1) return 'hace 1 mes';
+    if (months < 12) return `hace ${months} meses`;
+    const years = Math.floor(months / 12);
+    return years === 1 ? 'hace 1 año' : `hace ${years} años`;
   };
 
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>Opiniones de Nuestros Clientes</h1>
-      <div style={styles.sliderWrapper}>
-        <button
-          onClick={handlePrev}
-          style={{ ...styles.navButton, ...styles.navButtonLeft }}
-          aria-label="Anterior opinión"
-        >
-          &lt;
-        </button>
-        <div style={styles.sliderContainer}>
-          <div
-            style={{
-              ...styles.slider,
-              transform: `translateX(-${currentIndex * 100}%)`,
-            }}
-          >
-            {opiniones.map((opinion, index) => (
-              <div key={index} style={styles.opinionCard}>
-                <p style={styles.fecha}>{opinion.fecha}</p>
-                <h2 style={styles.titulo}>{opinion.titulo}</h2>
-                <p style={styles.descripcion}>{opinion.descripcion}</p>
-                <div style={styles.estrellas}>{'★'.repeat(opinion.estrellas)}</div>
-              </div>
-            ))}
+    <StyledWrapper>
+      <h1 className="title">Opiniones de Nuestros Clientes</h1>
+      <div className="opinion-cards">
+        {opiniones.map((opinion, index) => (
+          <div key={index} className="card">
+            <p className="fecha">{getRelativeTime(opinion.fecha)}</p>
+            <h2 className="card-title">{opinion.titulo}</h2>
+            <p className="small-desc">{opinion.descripcion}</p>
+            <div className="estrellas">{'★'.repeat(opinion.estrellas)}</div>
           </div>
-        </div>
-        <button
-          onClick={handleNext}
-          style={{ ...styles.navButton, ...styles.navButtonRight }}
-          aria-label="Siguiente opinión"
-        >
-          &gt;
-        </button>
+        ))}
       </div>
-    </div>
+    </StyledWrapper>
   );
 };
 
-const styles = {
-  container: {
-    padding: '20px',
-    fontFamily: 'Arial, sans-serif',
-    textAlign: 'center',
-    background: 'linear-gradient(to bottom, #ff9800, #ff6f00)', // Fondo degradado
-    minHeight: 'auto',
-    borderRadius: '10px',
-  },
-  title: {
-    fontSize: 'clamp(1.5rem, 5vw, 2rem)',
-    color: '#fff',
-    marginBottom: '20px',
-  },
-  sliderWrapper: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'relative',
-    marginBottom: '20px',
-  },
-  sliderContainer: {
-    width: '80%',
-    overflow: 'hidden',
-    borderRadius: '10px',
-  },
-  slider: {
-    display: 'flex',
-    transition: 'transform 0.5s ease-in-out',
-  },
-  opinionCard: {
-    width: '250px',
-    margin: '0 10px',
-    border: '1px solid #ddd',
-    borderRadius: '10px',
-    padding: '15px',
-    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-    backgroundColor: '#fff',
-    textAlign: 'center',
-  },
-  fecha: {
-    fontSize: '0.9rem',
-    color: '#555',
-    marginBottom: '5px',
-  },
-  titulo: {
-    fontSize: '1.2rem',
-    color: '#333',
-    marginBottom: '10px',
-  },
-  descripcion: {
-    fontSize: '1rem',
-    color: '#666',
-    marginBottom: '10px',
-  },
-  estrellas: {
-    fontSize: '1rem',
-    color: '#FFD700',
-  },
-  navButton: {
-    backgroundColor: '#FFA726',
-    color: '#fff',
-    border: 'none',
-    padding: '10px 15px',
-    cursor: 'pointer',
-    borderRadius: '50%',
-    fontSize: '1rem',
-    position: 'absolute',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    boxShadow: '0 2px 5px rgba(0,0,0,0.3)',
-  },
-  navButtonLeft: {
-    left: '-30px',
-  },
-  navButtonRight: {
-    right: '-30px',
-  },
-  '@media (max-width: 768px)': {
-    sliderContainer: {
-      width: '90%',
-    },
-    opinionCard: {
-      width: '200px',
-    },
-    navButton: {
-      padding: '8px 12px',
-    },
-  },
-  '@media (max-width: 480px)': {
-    title: {
-      fontSize: '1.2rem',
-    },
-    opinionCard: {
-      width: '180px',
-    },
-    navButton: {
-      padding: '6px 10px',
-    },
-  },
-};
+const StyledWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      45deg,
+      orange 25%,
+      orangered 25%,
+      orange 75%,
+      orangered 75%,
+      orange
+    ),
+    linear-gradient(
+      45deg,
+      orange 25%,
+      orangered 25%,
+      orange 75%,
+      orangered 75%,
+      orange
+    );
+  background-size: 5em 10em;
+  background-position: 0 0, 10px 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+
+  .title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .opinion-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card {
+    position: relative;
+    max-width: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2em 1.2em;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-title {
+    font-size: 1.2em;
+    color: #262626;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  .small-desc {
+    font-size: 1em;
+    color: #452c2c;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  .estrellas {
+    color: #FFD700;
+    font-size: 1.2em;
+  }
+
+  .fecha {
+    font-size: 0.9em;
+    color: #fff;
+    margin-bottom: 0.5em;
+  }
+`;
 
 export default Opiniones;

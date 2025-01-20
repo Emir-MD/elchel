@@ -127,6 +127,8 @@ const styles = {
     maxWidth: "1200px",
     margin: "0 auto",
     padding: "20px",
+    marginTop: '100px', // Añadido para evitar superposición con el Navbar
+
     fontFamily: "Arial, sans-serif",
     color: "#333",
   },

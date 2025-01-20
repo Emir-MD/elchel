@@ -1,16 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const MenuSection = () => {
   const dishes = [
     { 
       name: 'Orden de cochinita', 
       price: '$97.00 MXN', 
-      image: '/img/orden.jpg' // Ruta absoluta desde public
+      image: '/img/panuchos.jpg' // Ruta absoluta desde public
     },
     { 
       name: 'Paella', 
-      price: '$103.00 MXN', 
-      image: '/img/paella.jpg' // Ruta absoluta desde public
+      image: '/img/Menuelchel/paella.JPG' // Ruta absoluta desde public
     },
     { 
       name: 'Tacos de relleno negro',  
@@ -20,70 +20,113 @@ const MenuSection = () => {
   ];
 
   return (
-    <section style={styles.menuSection}>
-      <h3 style={styles.title}>Platillos Destacados</h3>
-      <div style={styles.menuGrid}>
+    <StyledMenuSection>
+      <h3 className="title">Platillos Destacados</h3>
+      <div className="menuGrid">
         {dishes.map((dish, index) => (
-          <div key={index} style={styles.card}>
+          <div key={index} className="card">
             <img 
               src={dish.image} 
               alt={dish.name} 
-              style={styles.image} 
+              className="image" 
             />
-            <h4 style={styles.cardTitle}>{dish.name}</h4>
-            <p style={styles.cardPrice}>{dish.price}</p>
+            <div className="cardContent">
+              <h4 className="cardTitle">{dish.name}</h4>
+              <p className="cardPrice">{dish.price}</p>
+            </div>
           </div>
         ))}
       </div>
-    </section>
+    </StyledMenuSection>
   );
 };
 
-const styles = {
-  menuSection: {
-    padding: '20px',
-    backgroundColor: 'white',
-    color: '#ff6f00',
-    textAlign: 'center',
-    width: '100%', // Asegura que la sección ocupe el ancho completo
-    margin: '0 auto',
-  },
-  title: {
-    fontSize: '24px',
-    marginBottom: '20px',
-  },
-  menuGrid: {
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '15px',
-    flexWrap: 'wrap',
-    maxWidth: '1200px', // Límite para tarjetas, opcional
-    margin: '0 auto', // Centrado del grid
-  },
-  card: {
-    padding: '15px',
-    border: '2px solid #ff6f00',
-    borderRadius: '8px',
-    width: '180px',
-    backgroundColor: '#fff',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-    textAlign: 'center',
-  },
-  image: {
-    width: '100%',
-    height: '120px',
-    objectFit: 'cover',
-    borderRadius: '5px',
-    marginBottom: '10px',
-  },
-  cardTitle: {
-    fontSize: '18px',
-    marginBottom: '10px',
-  },
-  cardPrice: {
-    fontSize: '16px',
-    fontWeight: 'bold',
-  },
-};
+const StyledMenuSection = styled.section`
+  padding: 20px;
+  background-color: white;
+  color: #ff6f00;
+  text-align: center;
+  margin-top: 100px;
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .menuGrid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    }
+
+    .image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .cardContent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #f2f2f2;
+      transform: rotateX(-90deg);
+      transform-origin: bottom;
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    &:hover .cardContent {
+      transform: rotateX(0deg);
+    }
+
+    &:hover .image {
+      transform: scale(0);
+    }
+  }
+
+  .cardTitle {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: 700;
+  }
+
+  .cardPrice {
+    margin: 10px 0 0;
+    font-size: 16px;
+    color: #777;
+    line-height: 1.4;
+    font-weight: bold;
+  }
+`;
 
 export default MenuSection;

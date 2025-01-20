@@ -231,6 +231,16 @@ const styles = {
   outerContainer: {
     backgroundColor: '#FFD700', // Fondo amarillo para el exterior
     padding: '20px 0',
+    backgroundImage: `repeating-conic-gradient(
+      from 0deg,
+      orangered,
+      transparent 10deg,
+      orange 10deg,
+      orangered 20deg
+    )`,
+    backgroundSize: '100% 100%',
+    backgroundRepeat: 'no-repeat',
+    backgroundColor: 'orange',
   },
   navbar: {
     display: 'flex',
@@ -238,9 +248,19 @@ const styles = {
     justifyContent: 'center',
     gap: '8px',
     padding: '10px 5px',
+    marginTop: '100px', // Añadido para evitar superposición con el Navbar
+
     borderBottom: '2px solid #ff6f00',
-    background: 'linear-gradient(to bottom, #ff9800, #ff6f00)',
-  },
+    backgroundImage: `repeating-conic-gradient(
+      from 0deg,
+      orangered,
+      transparent 10deg,
+      orange 10deg,
+      orangered 20deg
+    )`,
+    backgroundSize: '100% 100%',
+    backgroundRepeat: 'no-repeat',
+    backgroundColor: 'orange',  },
   navButton: {
     padding: '8px 12px',
     fontSize: 'clamp(12px, 1.5vw, 16px)',
@@ -267,7 +287,7 @@ const styles = {
     gap: '20px', // Espacio entre tarjetas
     justifyContent: 'center',
     alignItems: 'start',
-  },menuList: {
+  }, menuList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', // Diseño base: mínimo 250px por tarjeta
     gap: '20px', // Espacio entre tarjetas
@@ -337,7 +357,7 @@ const styles = {
       fontSize: 'clamp(12px, 1.2vw, 16px)', // Precio ajustado
     },
   },
-  
+
 };
 
 export default MenuMesa;

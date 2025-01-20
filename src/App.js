@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom'; // No `Router` aquí
+import React, { useState, useEffect, useRef } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import BannerPromocional from './components/BannerPromocional';
@@ -18,7 +18,23 @@ const App = () => {
     opacity: 0,
     transform: 'translateY(30px)',
   });
+  const [navbarHeight, setNavbarHeight] = useState(0);
+  const navbarRef = useRef(null);
 
+  // Actualizar dinámicamente la altura del navbar
+  useEffect(() => {
+    const updateNavbarHeight = () => {
+      if (navbarRef.current) {
+        setNavbarHeight(navbarRef.current.offsetHeight);
+      }
+    };
+
+    updateNavbarHeight(); // Calcula la altura inicial
+    window.addEventListener('resize', updateNavbarHeight); // Recalcula en redimensionamiento
+    return () => window.removeEventListener('resize', updateNavbarHeight); // Limpia el evento
+  }, []);
+
+  // Animación al cambiar de ruta
   useEffect(() => {
     setAnimationStyle({ opacity: 0, transform: 'translateY(30px)' });
     const timeout = setTimeout(() => {
@@ -29,17 +45,22 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
-      <div style={{ ...animationStyle }}>
+      {/* Navbar con ref para calcular su altura */}
+      <div ref={navbarRef}>
+        <Navbar />
+      </div>
+
+      {/* Contenedor principal con espaciado dinámico */}
+      <div style={{ ...animationStyle, paddingTop: `${navbarHeight}px` }}>
         <Routes>
           <Route
             path="/"
             element={
               <>
-                <BannerPromocional />
-                <Banner />
-                <MenuSection />
-                <Opiniones />
+                <BannerPromocional style={{ marginBottom: '20px' }} />
+                <Banner style={{ marginBottom: '20px' }} />
+                <MenuSection style={{ marginBottom: '20px' }} />
+                <Opiniones style={{ marginBottom: '20px' }} />
                 <Contacto />
               </>
             }
