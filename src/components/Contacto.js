@@ -87,7 +87,7 @@ const Contacto = () => {
         <div style={styles.container}>
           {/* Logo y slogan */}
           <div style={styles.logoContainer}>
-            <img src="/img/logos.png" alt="El Chel Logo" style={styles.logo} />
+            <img src="/img/Menuelchel/chel logo.png" alt="El Chel Logo" style={styles.logo} />
             <p style={styles.slogan}>La Casa de Todos</p>
           </div>
 

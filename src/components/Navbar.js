@@ -10,10 +10,10 @@ const Navbar = () => {
         {/* Logo a la izquierda */}
         <div style={styles.logoContainer}>
           <Link to="/">
-            <img src="/img/logos.png" alt="El Chel Logo" style={styles.logoImage} />
+            <img src="/img/Menuelchel/chel logo.png" alt="El Chel Logo" style={styles.logoImage} />
           </Link>
         </div>
-        {/* Enlaces a la derecha del logo */}
+        {/* Elogosnlaces a la derecha del logo */}
         <ul style={styles.navLinks}>
           <li>
             <Link
