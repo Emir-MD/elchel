@@ -88,7 +88,7 @@ const styles = {
     justifyContent: 'center',
     padding: '1rem',
     fontFamily: '"Arial", sans-serif',
-    width: '100%',
+    width: '98%',
     maxWidth: '98%',
     margin: '0 auto',
     height: 'auto',
