@@ -27,7 +27,6 @@ const Banner = () => {
             justify-content: center;
             width: 100%;
             border: 3px solid #ff5722;
-            border-radius: 10px;
             box-sizing: border-box;
             background-color: #fff;
 

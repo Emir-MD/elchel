@@ -89,10 +89,9 @@ const styles = {
     padding: '1rem',
     fontFamily: '"Arial", sans-serif',
     width: '100%',
-    maxWidth: '97%',
+    maxWidth: '90%',
     margin: '0 auto',
     height: 'auto',
-    borderRadius: '10px',
     marginTop: '140px',
     overflow: 'hidden',
     backgroundImage: 'radial-gradient(circle, orange, transparent 20%, orangered)',
@@ -145,7 +144,12 @@ const styles = {
   },
   '@media (max-width: 480px)': {
     banner: {
-      marginTop: '50px',
+    marginTop: '50px',  
+    width: '100%',
+    padding: '0.5rem', // Mantén el padding
+    height: 'auto', // Asegúrate de que no sea un valor fijo
+
+
     },
     mainText: {
       fontSize: '1.2rem',
