@@ -4,12 +4,10 @@ const Banner = () => {
   const images = [
     '/img/Menuelchel/redes oficiales.png',
     '/img/Menuelchel/paquetefinal.png',
-
-
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showDetails, setShowDetails] = useState(false);
+  const [showDetails, setShowDetails] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -24,28 +22,48 @@ const Banner = () => {
         {`
           .container {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            justify-content: center;
             width: 100%;
             border: 3px solid #ff5722;
             border-radius: 10px;
             box-sizing: border-box;
             background-color: #fff;
+
           }
-          .leftSide {
-            flex: 1;
-            text-align: center;
-            margin: 0 auto;
+          .slider {
+            width: 100%;
+            max-width: 1500px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
             position: relative;
-            transition: all 0.3s ease;
-            min-            padding: %;
-height: 250px;
-            background-color: #f9f9f9;
+          }
+          .slider::before {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 ratio */
+          }
+          .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             display: flex;
-            flex-direction: column;
             justify-content: center;
+            align-items: center;
+          }
+          .image {
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+          }
+          .textContainer {
+            text-align: center;
+            padding: 20px;
           }
           .text {
             font-size: clamp(1.5rem, 4vw, 3rem);
@@ -57,7 +75,6 @@ height: 250px;
             font-size: clamp(1rem, 2.5vw, 1.5rem);
             color: #333;
             line-height: 1.5;
-            position: relative;
           }
           .details {
             display: inline-block;
@@ -67,76 +84,38 @@ height: 250px;
             margin-top: 10px;
             transition: all 0.5s ease;
           }
-
-          .rightSide {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-          }
-
-          /* Aquí el fallback con ::before en lugar de aspect-ratio */
-          .slider {
-            position: relative;
-            width: 100%;
-            max-width: 1500px;
-            overflow: hidden;
-            border-radius: 10px;
-          }
-          .slider::before {
-            content: "";
-            display: block;
-            width: 100%;
-            padding-top: 56.25%; /* 16:9 */
-          }
-
-          .slide {
-            position: absolute;
-            top: 0; 
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-
-          .image {
-              width: clamp(400px, 100%, 800px);
-            height: auto;
-            object-fit: contain;
-          }
-
           @media (max-width: 768px) {
-            .container {
-              flex-direction: column;
-            }
-            .leftSide {
-              order: 1;
-              margin-bottom: 20px;
-            }
-            .rightSide {
-              order: 2;
-              width: 100%;
-            }
-            .slider {
-              width: 100%;
-            }
             .image {
               width: clamp(100px, 100%, 500px);
-              height: auto;
+              height: 100%;
+                          object-fit: contain;
+
             }
           }
         `}
       </style>
 
       <div className="container">
-        <div
-          className="leftSide"
-          onMouseEnter={() => setShowDetails(true)}
-          onMouseLeave={() => setShowDetails(false)}
-        >
+        <div className="slider">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className="slide"
+              style={{
+                transform: `translateX(${(index - currentIndex) * 100}%)`,
+                transition: 'transform 1s ease-in-out',
+              }}
+            >
+              <img
+                src={image}
+                alt={`Promoción ${index + 1}`}
+                className="image"
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="textContainer">
           <h1 className="text">EL CHEL</h1>
           <p className="subText">
             EL ENCANTADOR DE ESTÓMAGOS
@@ -155,27 +134,6 @@ height: 250px;
               una experiencia única!
             </span>
           </p>
-        </div>
-
-        <div className="rightSide">
-          <div className="slider">
-            {images.map((image, index) => (
-              <div
-                key={index}
-                className="slide"
-                style={{
-                  transform: `translateX(${(index - currentIndex) * 100}%)`,
-                  transition: 'transform 1s ease-in-out',
-                }}
-              >
-                <img
-                  src={image}
-                  alt={`Promoción ${index + 1}`}
-                  className="image"
-                />
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </>

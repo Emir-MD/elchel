@@ -155,15 +155,16 @@ const FooterWrapper = styled.footer`
   /* Contenedor principal */
   .container {
     display: flex;
+    flex-direction: row; /* Predeterminado para pantallas grandes */
+  align-items: flex-start; /* Alinea al inicio */
+    justify-content: space-between; /* Espacia uniformemente las columnas */
     border: none;
-    justify-content: space-between;
-    align-items: flex-start;
     /* Si quieres que se estire full-width en móvil, no uses max-width o pon max-width: 100%. */
-    max-width: 1500px;
+    max-width: 1000px;
     margin: 0 auto;
     background: linear-gradient(to bottom, #ff6f00, #ff9800);
     margin-top:140px;
-    gap: 10px;
+    gap: 20px;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -252,7 +253,7 @@ const StyledWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 40px;
   }
 
   .icon-content {
