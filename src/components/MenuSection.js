@@ -127,6 +127,58 @@ const StyledMenuSection = styled.section`
     line-height: 1.4;
     font-weight: bold;
   }
+
+  /* Media queries for responsive design */
+  @media (max-width: 768px) {
+    .menuGrid {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      width: 90%;
+      height: auto;
+    }
+
+    .image {
+      height: 180px;
+    }
+
+    .cardContent {
+      padding: 15px;
+    }
+
+    .cardTitle {
+      font-size: 16px;
+    }
+
+    .cardPrice {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .title {
+      font-size: 24px;
+    }
+
+    .card {
+      width: 100%;
+      height: auto;
+    }
+
+    .image {
+      height: 150px;
+    }
+
+    .cardTitle {
+      font-size: 14px;
+    }
+
+    .cardPrice {
+      font-size: 12px;
+    }
+  }
 `;
 
 export default MenuSection;

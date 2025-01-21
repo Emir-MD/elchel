@@ -83,43 +83,76 @@ const StyledWrapper = styled.div`
 const styles = {
   banner: {
     display: 'flex',
-    flexDirection: 'column', // Alinea los elementos verticalmente en móviles
+    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     padding: '1rem',
     fontFamily: '"Arial", sans-serif',
     width: '100%',
-    maxWidth: '98%', // Limita el ancho máximo del banner
-    margin: '0 auto', // Centra el banner horizontalmente
-    height: 'auto', // Permite que la altura se ajuste al contenido
+    maxWidth: '98%',
+    margin: '0 auto',
+    height: 'auto',
     borderRadius: '10px',
     marginTop: '140px',
     overflow: 'hidden',
-    backgroundImage: 'radial-gradient(circle, orange, transparent 20%, orangered)', // Fondo con gradiente radial
+    backgroundImage: 'radial-gradient(circle, orange, transparent 20%, orangered)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    backgroundColor: 'orange', // Color de respaldo
-    boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.2)', // Sombra
+    backgroundColor: 'orange',
+    boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.2)',
   },
   textContainer: {
-    textAlign: 'center', // Centra el texto
+    textAlign: 'center',
     color: '#fff',
     padding: '0 1rem',
     width: '100%',
   },
   mainText: {
-    fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', // Tamaño dinámico del título
+    fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
     fontWeight: 'bold',
     marginBottom: '0.5rem',
+    textShadow: `
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,  
+      -1px  1px 0 #000,  
+       1px  1px 0 #000`,
   },
   subText: {
-    fontSize: 'clamp(1rem, 3vw, 1.2rem)', // Tamaño dinámico del subtítulo
+    fontSize: 'clamp(1rem, 3vw, 1.2rem)',
     marginBottom: '1rem',
+    textShadow: `
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,  
+      -1px  1px 0 #000,  
+       1px  1px 0 #000`,
   },
   buttonContainer: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  '@media (max-width: 768px)': {
+    banner: {
+      marginTop: '100px',
+      padding: '0.5rem',
+    },
+    mainText: {
+      fontSize: '1.5rem',
+    },
+    subText: {
+      fontSize: '1rem',
+    },
+  },
+  '@media (max-width: 480px)': {
+    banner: {
+      marginTop: '50px',
+    },
+    mainText: {
+      fontSize: '1.2rem',
+    },
+    subText: {
+      fontSize: '0.9rem',
+    },
   },
 };
 

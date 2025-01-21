@@ -248,7 +248,7 @@ const styles = {
     justifyContent: 'center',
     gap: '8px',
     padding: '10px 5px',
-    marginTop: '100px', // Añadido para evitar superposición con el Navbar
+    marginTop: '140px', // Añadido para evitar superposición con el Navbar
 
     borderBottom: '2px solid #ff6f00',
     backgroundImage: `repeating-conic-gradient(
