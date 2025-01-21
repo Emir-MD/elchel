@@ -4,7 +4,8 @@ const Banner = () => {
   const images = [
     '/img/Menuelchel/redes oficiales.png',
     '/img/Menuelchel/paquetefinal.png',
-    '/img/Menuelchel/2x1.png',
+
+
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,7 +29,6 @@ const Banner = () => {
             justify-content: space-between;
             flex-wrap: wrap;
             width: 100%;
-            padding: 2%;
             border: 3px solid #ff5722;
             border-radius: 10px;
             box-sizing: border-box;
@@ -40,7 +40,8 @@ const Banner = () => {
             margin: 0 auto;
             position: relative;
             transition: all 0.3s ease;
-            min-height: 250px;
+            min-            padding: %;
+height: 250px;
             background-color: #f9f9f9;
             display: flex;
             flex-direction: column;
@@ -102,7 +103,7 @@ const Banner = () => {
           }
 
           .image {
-            width: 100%;
+              width: clamp(400px, 100%, 800px);
             height: auto;
             object-fit: contain;
           }
@@ -123,7 +124,7 @@ const Banner = () => {
               width: 100%;
             }
             .image {
-              width: 90%;
+              width: clamp(100px, 100%, 500px);
               height: auto;
             }
           }
