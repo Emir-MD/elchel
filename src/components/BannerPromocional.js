@@ -24,21 +24,21 @@ const StyledWrapper = styled.div`
     position: relative;
     padding: 10px 20px;
     border-radius: 7px;
-    border: 1px solid rgb(255, 123, 0);
+    border: 1px solid rgb(231, 231, 231);
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 2px;
     background: transparent;
-    color: #fff;
+    color:rgb(0, 0, 0);
     overflow: hidden;
     box-shadow: 0 0 0 0 transparent;
     transition: all 0.2s ease-in;
   }
 
   button:hover {
-    background: rgb(255, 162, 0);
-    box-shadow: 0 0 30px 5px rgba(253, 122, 0, 0.81);
+    background: rgb(255, 170, 0);
+    box-shadow: 0 0 30px 5px rgba(252, 252, 252, 0.81);
     transition: all 0.2s ease-out;
   }
 
@@ -55,7 +55,7 @@ const StyledWrapper = styled.div`
     top: 7%;
     left: 0%;
     opacity: 0;
-    background: #fff;
+    background:rgb(245, 245, 245);
     box-shadow: 0 0 50px 30px #fff;
     transform: skewX(-20deg);
   }
@@ -98,7 +98,7 @@ const styles = {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundColor: 'orange',
-    boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.2)',
+    boxShadow: '0px 2px 5px rgba(216, 187, 187, 0.2)',
   },
   textContainer: {
     textAlign: 'center',
