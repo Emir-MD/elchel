@@ -8,6 +8,7 @@ import Contacto from './components/Contacto';
 import Sucursales from './pages/Sucursales';
 import MainMenu from './pages/Menus/MainMenu';
 import MenuMesa from './pages/Menus/MenuMesa';
+import MenuParaLlevar from './pages/Menus/MenuParaLLevar';
 import Nosotros from './pages/Nosotros';
 import Opiniones from './pages/Opiniones';
 import Terminos from './pages/Terminos';
@@ -68,6 +69,7 @@ const App = () => {
           <Route path="/sucursales" element={<Sucursales />} />
           <Route path="/menu" element={<MainMenu />} />
           <Route path="/menuMesa" element={<MenuMesa />} />
+          <Route path="/menuparallevar" element={<MenuParaLlevar />} />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/opiniones" element={<Opiniones />} />
           <Route path="/terminos" element={<Terminos />} />

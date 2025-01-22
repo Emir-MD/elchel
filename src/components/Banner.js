@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react';
 
 const Banner = () => {
   const images = [
-    '/img/Menuelchel/redes oficiales.png',
+    '/img/elcheloficial.jpg',
     '/img/Menuelchel/paquetefinal.png',
+    '/img/paegapromo.jpg',
+    '/img/sucExpress.jpg',
+
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

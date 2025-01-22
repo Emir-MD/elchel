@@ -23,6 +23,16 @@ const Sucursales = () => {
       mapsLink: "https://www.google.com/maps/place/El+Chel/@19.294324,-99.141112,14z/data=!4m10!1m2!2m1!1selchel!3m6!1s0x85ce0136df3356d1:0xf5d91e358948f8d2!8m2!3d19.2939823!4d-99.1092398!15sCgZlbGNoZWxaCCIGZWxjaGVskgESbWV4aWNhbl9yZXN0YXVyYW504AEA!16s%2Fg%2F11k9lg3y98?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
       imagen: "/img/suc2.png"
     },
+    {
+      id: 3,
+      nombre: "El CHel Express",
+      direccion: "Av. Thiers 3-13, Anzures, Miguel Hidalgo, 11590 Ciudad de México, CDMX",
+      horario: "Lunes a Domingo: 8 AM - 10 PM",
+      telefono: "",
+      whatsapp: "55 7181 0812",
+      mapsLink: "    https://www.google.com/maps/place/Av.+Thiers+3-13,+Anzures,+Miguel+Hidalgo,+11590+Ciudad+de+M%C3%A9xico,+CDMX/@19.4302871,-99.1752753,20.97z/data=!4m5!3m4!1s0x85d1ff4cbf131e91:0x88476f24efc1db7b!8m2!3d19.4301363!4d-99.1751122?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
+      imagen: "/img/sucu3.png"
+    },
 
   ];
   

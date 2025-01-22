@@ -23,12 +23,12 @@ const StyledWrapper = styled.div`
   button {
     position: relative;
     padding: 10px 20px;
-    border-radius: 7px;
+    border-radius: 20px;
     border: 1px solid rgb(231, 231, 231);
-    font-size: 14px;
+    font-size: 20px;
     text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 2px;
+    font-weight: 600px;
+    letter-spacing: 5px;
     background: transparent;
     color:rgb(0, 0, 0);
     overflow: hidden;
@@ -56,7 +56,7 @@ const StyledWrapper = styled.div`
     left: 0%;
     opacity: 0;
     background:rgb(245, 245, 245);
-    box-shadow: 0 0 50px 30px #fff;
+    box-shadow: 0 0 50px 35px #fff;
     transform: skewX(-20deg);
   }
 
@@ -107,7 +107,7 @@ const styles = {
     width: '100%',
   },
   mainText: {
-    fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
+    fontSize: 'clamp(1.5rem, 4vw, 3rem)',
     fontWeight: 'bold',
     marginBottom: '0.5rem',
     textShadow: `

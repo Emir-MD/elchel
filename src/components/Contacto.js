@@ -80,7 +80,7 @@ const Contacto = () => {
                   <a 
                     data-social="facebook" 
                     aria-label="Facebook" 
-                    href="https://www.facebook.com/share/19nvSzrxNV/?mibextid=wwXIfr" 
+                    href="https://www.facebook.com/share/1BJwMeEuq8/?mibextid=wwXIfr" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >

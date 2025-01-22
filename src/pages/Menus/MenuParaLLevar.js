@@ -11,16 +11,10 @@ const MenuParaLlevar = () => {
       image: "/img/Menuelchel/paquetellevar.JPG"
     },
     {
-      category: "para_llevar",
-      name: "1/2 Kg de cochinita, relleno negro, lomo adobado o lechón",
-      description: "Incluye frijoles o sopa de lima, tortillas, cebollitas moradas, salsa de escabeche y crema de habanero.",
-      image: "/img/paquetellevar.JPG"
-    },
-    {
       category: "extras",
       name: "Sopa de lima de 1 lt",
       description: "Complemento extra para acompañar tus pedidos.",
-      image: "/img/sopalimajpg"
+      image: "/img/sopalima.jpg"
     },
   ];
 
@@ -32,7 +26,7 @@ const MenuParaLlevar = () => {
   return (
     <div style={styles.outerContainer}>
       <nav style={styles.navbar}>
-        {['Todos', 'Para Llevar', 'Extras'].map((category, index) => (
+        {['Todos', 'Para_llevar', 'Extras'].map((category, index) => (
           <button
             key={index}
             onClick={() => setSelectedCategory(category.toLowerCase() === 'todos' ? null : category.toLowerCase())}
@@ -79,6 +73,8 @@ const styles = {
     flexWrap: 'wrap',
     justifyContent: 'center',
     gap: '8px',
+    marginTop: '140px', // Añadido para evitar superposición con el Navbar
+
     padding: '10px 5px',
     borderBottom: '2px solid #ff6f00',
     background: 'linear-gradient(to bottom, #ff9800, #ff6f00)',
