@@ -6,7 +6,7 @@ const MenuSection = () => {
     { 
       name: 'Orden de cochinita', 
       description: 'Deliciosa cochinita pibil preparada al estilo tradicional yucateco, acompañada de cebolla morada y tortillas.', 
-      image: '/img/panuchos.jpg' // Ruta absoluta desde public
+      image: '/img/Menuelchel/tacosdecochinita.jpg' // Ruta absoluta desde public
     },
     { 
       name: 'Paella', 
