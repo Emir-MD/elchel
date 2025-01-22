@@ -1,51 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- Página principal -->
   <url>
     <loc>https://www.elchel.mx/</loc>
-    <lastmod>2025-01-21</lastmod>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.elchel.mx/img/Menuelchel/chel%20logo.png</image:loc>
+      <image:caption>Logo de El Chel</image:caption>
+    </image:image>
   </url>
-  <!-- Menú -->
+
+  <!-- Páginas principales -->
   <url>
     <loc>https://www.elchel.mx/menu</loc>
-    <lastmod>2025-01-21</lastmod>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.elchel.mx/menu/mesa</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.elchel.mx/menu/para-llevar</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <!-- Nosotros -->
-  <url>
-    <loc>https://www.elchel.mx/nosotros</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <!-- Sucursales -->
-  <url>
     <loc>https://www.elchel.mx/sucursales</loc>
-    <lastmod>2025-01-21</lastmod>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <!-- Contacto -->
   <url>
-    <loc>https://www.elchel.mx/contacto</loc>
-    <lastmod>2025-01-21</lastmod>
+    <loc>https://www.elchel.mx/nosotros</loc>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.elchel.mx/contacto</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Páginas dinámicas de platillos -->
+  <url>
+    <loc>https://www.elchel.mx/menu/desayunos/huevos-al-gusto</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.elchel.mx/img/Menuelchel/Huevoscontocino.JPG</image:loc>
+      <image:caption>Huevos al gusto</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.elchel.mx/menu/desayunos/sopes-tradicionales</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.elchel.mx/img/Menuelchel/sopes.JPG</image:loc>
+      <image:caption>Sopes tradicionales</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.elchel.mx/menu/desayunos/molletes</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://www.elchel.mx/img/molletes.jpg</image:loc>
+      <image:caption>Molletes</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.elchel.mx/menu/desayunos/chilaquiles-verdes-rojos</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.elchel.mx/img/Menuelchel/chilaquileszoncecina.JPG</image:loc>
+      <image:caption>Chilaquiles verdes o rojos</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.elchel.mx/menu/comida/cochinita-pibil</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.elchel.mx/img/cochinita.jpg</image:loc>
+      <image:caption>Cochinita Pibil</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.elchel.mx/menu/comida/paella</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.elchel.mx/img/Menuelchel/paella.JPG</image:loc>
+      <image:caption>Paella (especial de la casa)</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.elchel.mx/menu/comida/camarones-extra</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://www.elchel.mx/img/camaron.jpg</image:loc>
+      <image:caption>Camarones extra para la paella</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.elchel.mx/menu/postres/pan-de-dulce</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>https://www.elchel.mx/img/Menuelchel/pan%20de%20dulce.JPG</image:loc>
+      <image:caption>Pan de Dulce</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.elchel.mx/menu/bebidas/ron</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>https://www.elchel.mx/img/Menuelchel/ron.JPG</image:loc>
+      <image:caption>Ron</image:caption>
+    </image:image>
   </url>
 </urlset>
 
