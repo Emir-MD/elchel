@@ -29,7 +29,7 @@ const Terminos = () => {
           </a>
         </li>
         <li>
-          <a href="https://www.facebook.com/share/1BJwMeEuq8/?mibextid=wwXIfr" style={styles.link} target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/profile.php?id=61572273834288" style={styles.link} target="_blank" rel="noopener noreferrer">
             Facebook: EL Chel
           </a>
         </li>
