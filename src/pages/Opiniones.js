@@ -3,12 +3,7 @@ import styled from 'styled-components';
 
 const Opiniones = () => {
   const [opiniones, setOpiniones] = useState([
-    {
-      fecha: new Date('2023-04-01'),
-      titulo: 'Excelente pozole',
-      descripcion: 'Excelente comida mexicana a pesar de ser una cadena grande los sabores son exquisitos y los locales mantienen el lugar siempre lleno.',
-      estrellas: 5,
-    },
+
     {
       fecha: new Date('2022-12-01'),
       titulo: 'Buena experiencia en El Chel',

@@ -24,13 +24,13 @@ const Terminos = () => {
       </p>
       <ul style={styles.list}>
         <li>
-          <a href="https://instagram.com/tu_restaurante" style={styles.link} target="_blank" rel="noopener noreferrer">
-            Instagram: https://instagram.com/tu_restaurante
+          <a href="https://www.instagram.com/elchel_oficial/" style={styles.link} target="_blank" rel="noopener noreferrer">
+            Instagram: @elchel_oficial
           </a>
         </li>
         <li>
-          <a href="https://facebook.com/tu_restaurante" style={styles.link} target="_blank" rel="noopener noreferrer">
-            Facebook: https://facebook.com/tu_restaurante
+          <a href="https://www.facebook.com/share/1BJwMeEuq8/?mibextid=wwXIfr" style={styles.link} target="_blank" rel="noopener noreferrer">
+            Facebook: EL Chel
           </a>
         </li>
         <li>
@@ -75,6 +75,7 @@ const styles = {
     fontFamily: 'Arial, sans-serif',
     maxWidth: '800px',
     margin: '0 auto',
+    margintop:'400px',
     lineHeight: '1.6',
   },
   title: {
