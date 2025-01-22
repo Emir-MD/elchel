@@ -30,7 +30,7 @@ const Sucursales = () => {
       horario: "Lunes a Domingo: 8 AM - 6:30 PM",
       telefono: "55 7095-2665",
       mapsLink: "https://www.google.com/maps/place/Miguel+Hidalgo+5,+Arenal+Tepepan,+Tlalpan,+14620+Ciudad+de+M%C3%A9xico,+CDMX/data=!4m6!3m5!1s0x85ce00f75c06a4b1:0xc851bf08481d7a1e!7e2!8m2!3d19.2860662!4d-99.1570545?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBjI1LjIuNBgAIJ6dCip1LDk0MjQyNDk5LDk0MjIzMjk5LDk0MjE2NDEzLDk0MjEyNDk2LDk0MjEyNjY1LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE3NTIzLDk0MjE4NjUzLDk0MjI5ODM5LDQ3MDg0MzkzLDk0MjEzMjAwQgJNWA%3D%3D",
-      imagen: "/img/sucursal3.png"
+      imagen: "/img/sucursalexpress.png"
     },
 
   ];
