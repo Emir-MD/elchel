@@ -7,7 +7,7 @@ const Sucursales = () => {
       id: 1,
       nombre: "Matriz",
       direccion: "Av. División del Nte. 4405, Coapa, Ex de San Juan de Dios, Tlalpan, CDMX",
-      horario: "Lunes a Domingo: 8 AM - 10 PM",
+      horario: "Lunes a Domingo: 8 AM - 6:30 PM",
       telefono: "55 6603 0293",
       whatsapp: "55 7511 0551",
        mapsLink: "https://www.google.com/maps/place/El+Chel/@19.294668,-99.1413122,16z/data=!3m1!5s0x85ce01a70754d223:0x3809b5d7d88c2cdd!4m10!1m2!2m1!1sel+chel!3m6!1s0x85ce01a7aa008ad5:0x6cfc1eebd37d3b2a!8m2!3d19.294668!4d-99.131785!15sCgdlbCBjaGVsWgkiB2VsIGNoZWySARJtZXhpY2FuX3Jlc3RhdXJhbnTgAQA!16s%2Fg%2F1tw1f4wl?entry=ttu&g_ep=EgoyMDI1MDExMC4wIKXMDSoASAFQAw%3D%3D",
@@ -17,7 +17,7 @@ const Sucursales = () => {
       id: 2,
       nombre: "Cuemanco",
       direccion: "Cañaverales 39, Coapa, Magisterial, Tlalpan, CDMX",
-      horario: "Lunes a Domingo: 8 AM - 10 PM",
+      horario: "Lunes a Domingo: 8 AM - 6:30 PM",
       telefono: "55 9278 4907",
       whatsapp: "55 7181 0812",
       mapsLink: "https://www.google.com/maps/place/El+Chel/@19.294324,-99.141112,14z/data=!4m10!1m2!2m1!1selchel!3m6!1s0x85ce0136df3356d1:0xf5d91e358948f8d2!8m2!3d19.2939823!4d-99.1092398!15sCgZlbGNoZWxaCCIGZWxjaGVskgESbWV4aWNhbl9yZXN0YXVyYW504AEA!16s%2Fg%2F11k9lg3y98?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
@@ -26,11 +26,11 @@ const Sucursales = () => {
     {
       id: 3,
       nombre: "El Chel Express",
-      direccion: "Av. Thiers 3-13, Anzures, Miguel Hidalgo, 11590 Ciudad de México, CDMX",
-      horario: "Lunes a Domingo: 8 AM - 10 PM",
+      direccion: "Miguel Hidalgo 5, Arenal Tepepan, Tlalpan, 14620 Ciudad de México, CDMX",
+      horario: "Lunes a Domingo: 8 AM - 6:30 PM",
       telefono: "55 7095-2665",
-      mapsLink: "    https://www.google.com/maps/place/Av.+Thiers+3-13,+Anzures,+Miguel+Hidalgo,+11590+Ciudad+de+M%C3%A9xico,+CDMX/@19.4302871,-99.1752753,20.97z/data=!4m5!3m4!1s0x85d1ff4cbf131e91:0x88476f24efc1db7b!8m2!3d19.4301363!4d-99.1751122?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
-      imagen: "/img/sucu3.png"
+      mapsLink: "https://www.google.com/maps/place/Miguel+Hidalgo+5,+Arenal+Tepepan,+Tlalpan,+14620+Ciudad+de+M%C3%A9xico,+CDMX/data=!4m6!3m5!1s0x85ce00f75c06a4b1:0xc851bf08481d7a1e!7e2!8m2!3d19.2860662!4d-99.1570545?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBjI1LjIuNBgAIJ6dCip1LDk0MjQyNDk5LDk0MjIzMjk5LDk0MjE2NDEzLDk0MjEyNDk2LDk0MjEyNjY1LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE3NTIzLDk0MjE4NjUzLDk0MjI5ODM5LDQ3MDg0MzkzLDk0MjEzMjAwQgJNWA%3D%3D",
+      imagen: "/img/sucursal3.png"
     },
 
   ];
