@@ -9,7 +9,7 @@ const BannerPromocional = () => {
         <p style={styles.subText}>Escríbenos y haz tu pedido para llevar o a domicilio</p>
         <div style={styles.buttonContainer}>
           <StyledWrapper>
-            <button onClick={() => window.open('https://wa.me/7771861658', '_blank')}>
+            <button onClick={() => window.open('https://wa.me/525556030293', '_blank')}>
               LLÁMANOS YA
             </button>
           </StyledWrapper>
