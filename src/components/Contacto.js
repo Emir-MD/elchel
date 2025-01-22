@@ -80,7 +80,7 @@ const Contacto = () => {
                   <a 
                     data-social="facebook" 
                     aria-label="Facebook" 
-                    href="https://www.facebook.elchel.mx" 
+                    href="https://www.facebook.com/profile.php?id=61572273834288" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
@@ -103,7 +103,7 @@ const Contacto = () => {
                   <a 
                     data-social="instagram" 
                     aria-label="Instagram" 
-                    href="https://www.instagram.elchel.mx" 
+                    href="https://www.instagram.com/elchel_oficial/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
