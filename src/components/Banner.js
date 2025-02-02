@@ -6,7 +6,6 @@ const Banner = () => {
     '/img/Menuelchel/paquetefinal.png',
     '/img/paegapromo.jpg',
     '/img/sucExpress.jpg',
-
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,7 +31,6 @@ const Banner = () => {
             border: 3px solid #ff5722;
             box-sizing: border-box;
             background-color: #fff;
-
           }
           .slider {
             width: 100%;
@@ -63,6 +61,23 @@ const Banner = () => {
             height: 90%;
             object-fit: contain;
           }
+          .selector {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+          }
+          .selector img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: border 0.3s;
+          }
+          .selector img.selected {
+            border: 2px solid #ff5722;
+          }
           .textContainer {
             text-align: center;
             padding: 20px;
@@ -90,8 +105,7 @@ const Banner = () => {
             .image {
               width: clamp(100px, 100%, 500px);
               height: 100%;
-                          object-fit: contain;
-
+              object-fit: contain;
             }
           }
         `}
@@ -108,12 +122,20 @@ const Banner = () => {
                 transition: 'transform 1s ease-in-out',
               }}
             >
-              <img
-                src={image}
-                alt={`Promoción ${index + 1}`}
-                className="image"
-              />
+              <img src={image} alt={`Promoción ${index + 1}`} className="image" />
             </div>
+          ))}
+        </div>
+
+        <div className="selector">
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`Miniatura ${index + 1}`}
+              className={currentIndex === index ? 'selected' : ''}
+              onClick={() => setCurrentIndex(index)}
+            />
           ))}
         </div>
 
