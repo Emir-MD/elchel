@@ -12,6 +12,7 @@ import MenuParaLlevar from './pages/Menus/MenuParaLLevar';
 import Nosotros from './pages/Nosotros';
 import Opiniones from './pages/Opiniones';
 import Terminos from './pages/Terminos';
+import Popup from './components/Popup'; // ✅ Importamos el componente Popup
 
 const App = () => {
   const location = useLocation();
@@ -46,6 +47,8 @@ const App = () => {
 
   return (
     <>
+      <Popup /> {/* ✅ Muestra el popup al cargar la página */}
+
       {/* Navbar con ref para calcular su altura */}
       <div ref={navbarRef}>
         <Navbar />
