@@ -34,7 +34,7 @@ const Popup = () => {
 const styles = {
   popupOverlay: {
     position: "fixed",
-    top:70,
+    top:100,
     left: 0,
     width: "100%",
     height: "100%",
@@ -77,7 +77,7 @@ const styles = {
   // 📱 **Media Queries para mejorar la "X" en celulares**
   "@media (max-width: 600px)": {
     popupContainer: {
-      width: "90vw", // Hace que el popup ocupe el 90% del ancho de la pantalla
+      width: "70vw", // Hace que el popup ocupe el 90% del ancho de la pantalla
       height: "auto",
     },
     popupImage: {
@@ -95,8 +95,8 @@ const styles = {
 
   "@media (max-width: 400px)": {
     closeBtn: {
-      top:0,
-      right: "2px",
+      top:100,
+      right: "02px",
       fontSize: "18px",
       padding: "8px",
     },
