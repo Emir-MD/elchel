@@ -46,8 +46,8 @@ const styles = {
   },
   popupContainer: {
     position: "relative",
-    width: "780px", // Tamaño estándar en pantallas grandes
-    height: "780px",
+    width: "500px", // Tamaño estándar en pantallas grandes
+    height: "700px",
     maxWidth: "90vw", // Se adapta en pantallas pequeñas
     maxHeight: "90vh",
     display: "flex",
