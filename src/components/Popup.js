@@ -19,7 +19,7 @@ const Popup = () => {
           {/* Imagen con enlace */}
           <a href="https://www.facebook.com/profile.php?id=61572273834288" target="_blank" rel="noopener noreferrer">
             <img
-              src="/img/SuperbowlProm.jpg"
+              src="/img/2x1.jpg"
               alt="Anuncio de El Chel"
               style={styles.popupImage}
             />

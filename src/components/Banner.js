@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 const Banner = () => {
   const images = [
-    '/img/Superbowl.jpg',
-    '/img/SuperbowlProm.jpg',
     '/img/elcheloficial.jpg',
     '/img/Menuelchel/paquetefinal.png',
     '/img/paegapromo.jpg',
@@ -165,5 +163,4 @@ const Banner = () => {
     </>
   );
 };
-
 export default Banner;

@@ -13,6 +13,5 @@ root.render(
     </HashRouter>
   </React.StrictMode>
 );
-
 // Reportar métricas de rendimiento
 reportWebVitals();
